@@ -1,0 +1,1322 @@
+[gd_scene load_steps=23 format=4 uid="uid://bb6ggc3pqn578"]
+
+[ext_resource type="Texture2D" uid="uid://b4rrd06t7sdrg" path="res://Assets/Imagens/anime_skybox.jpg" id="1_pa6j6"]
+[ext_resource type="Texture2D" uid="uid://bgx72kwiaayf8" path="res://Assets/kit_kenny/GLB format/Textures/colormap.png" id="2_4dvsh"]
+[ext_resource type="Script" uid="uid://dpr4jq3lx6wgm" path="res://Script/camera_pivot.gd" id="2_4r8rk"]
+[ext_resource type="PackedScene" uid="uid://cnu5gggxwrgg1" path="res://Assets/pack Tree/pinheiro_medio.glb" id="3_ay5oo"]
+[ext_resource type="PackedScene" uid="uid://djs5pyrbfuxgo" path="res://Assets/Houses/farm_collision.tscn" id="3_ks8n1"]
+[ext_resource type="PackedScene" uid="uid://cjdb0478ywb4p" path="res://Assets/pack Tree/pinheiro_magro.glb" id="5_v0p3n"]
+[ext_resource type="PackedScene" uid="uid://qrppwavtupcj" path="res://Assets/pack Tree/pinheiro_gordo.glb" id="6_ypq2k"]
+[ext_resource type="PackedScene" uid="uid://8i5rkbbkr744" path="res://Assets/pack Tree/7.glb" id="7_4r8rk"]
+[ext_resource type="PackedScene" uid="uid://cr36sk2bdx184" path="res://Assets/pack Tree/6.glb" id="8_44brb"]
+[ext_resource type="PackedScene" uid="uid://by72s18rpc1vx" path="res://Assets/pack Tree/4.glb" id="9_ju8gl"]
+[ext_resource type="PackedScene" uid="uid://by2qq5tek1vku" path="res://Assets/pack Tree/3full.glb" id="10_4eob5"]
+[ext_resource type="PackedScene" uid="uid://c7ys2qwg7hndx" path="res://Assets/pack Tree/5.glb" id="11_ikoig"]
+[ext_resource type="PackedScene" uid="uid://dbgjx12rk3xv3" path="res://Assets/Player/player_running.tscn" id="12_v0p3n"]
+[ext_resource type="Script" uid="uid://csbruw4jhs5au" path="res://Script/Player.gd" id="12_ypq2k"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_x5oxt"]
+panorama = ExtResource("1_pa6j6")
+
+[sub_resource type="Sky" id="Sky_vqnaq"]
+sky_material = SubResource("PanoramaSkyMaterial_x5oxt")
+
+[sub_resource type="Environment" id="Environment_rljl1"]
+background_mode = 2
+sky = SubResource("Sky_vqnaq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3w7sn"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("2_4dvsh")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fll3k"]
+_surfaces = [{
+"aabb": AABB(-0.55, 2.0037067e-30, -0.63508517, 1.1, 0.5, 1.2701703),
+"format": 34896613377,
+"index_count": 132,
+"index_data": PackedByteArray("AgAQABEAEgARABAAEwAQAAIAEAATABIAEQABAAIAAgAUABMAEQASABUAFQABABEAAwAVABIAAQAWAAIAFAACABYAAQAXABYAGAAXAAEAFgAXABgAAQAVABgAFQADAAQABAAYABUAEgAAAAMAGAAZABYAFgAZABQAGAAEAAUABQAZABgABgAUABkAGQAFAAYAFAAGAAcABwATABQAEgATAAcABwAAABIABQAEAAgACAAEAAkACAAKAAUABQAKAAsACwAKAAgACwAMAAUACQANAAgACwAIAA0ADQAJAAAADAALAA4ADgAHAAwADgALAA0AAAAHAA4ADQAPAA4ADgAPAAAAAAAPAA0A"),
+"lods": [0.556171, PackedByteArray("AAABAAIAAwABAAAAAQADAAQAAQAFAAIAAQAEAAUABgACAAUAAgAGAAcAAAACAAcABQAEAAgACAAEAAkACAAKAAUABQAKAAsACwAKAAgACwAMAAUACQANAAgACwAIAA0ADQAJAAAADAALAA4ADgALAA0ADgAHAAwAAAAHAA4ADQAPAA4ADgAPAAAAAAAPAA0A")],
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 26,
+"vertex_data": PackedByteArray("XPT/fy26AAD/f///XPQAAP9///+iCwAA/3//f1z0AACiC/9/LboAAKIL/3/RRQAA/3//f6ILAABc9P9/0UUAAKILAAAtugAA/3//f1z0AACiCwAA0UUAAP9/AACiCwAA/3//f6ILAAD/fwAAXPQAAFz0AADRRQAAXPQAAC26AABc9P//0UUAAFz0//8tugAA////v/+/AAD///+//z8AAP9//78AAAAA/3//v///AACiC///0UUAAKIL//8tugAAAAD/v/+/AAAAAP+//z8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_u0os5"]
+resource_name = "block-grass-low-hexagon_block-grass-low-hexagon"
+_surfaces = [{
+"aabb": AABB(-0.55, 2.0037067e-30, -0.63508517, 1.1, 0.5, 1.2701703),
+"attribute_data": PackedByteArray("/zeYuf83ZYb/N2WG/zeYuf83mLn/N5i5/zeYuf83mLn/t5j5/7dlxv+3Zcb/t5j5/7dlxv+3Zcb/t2XG/7dlxv+3Zcb/t2XG/7eY+f+3Zcb/t2XG/7eY+f+3mPn/t2XG/7dlxv+3mPn/t5j5/7dlxv+3Zcb/t5j5/7dlxv+3Zcb/t5j5/7eY+f+3mPn/t5j5/7dlxv+3Zcb/N2WG/zdlhv83ZYb/N2WG/zdlhv83ZYb/N2WG/zf/n/83/5//N2WG/zf/n/83/5//N2WG/zdlhv83/5//N/+f/zf/n/83/5//N/+f/zf/n/83ZYb/N2WG/zf/n/83mLn/N/+f/zdlhv83/5//N/+f/zdlhv83/5//N/+f/zf/n/83mLn/N/+f/zf/n/83mLn/N5i5/zf/n/83ZYb/N/+f/zf/n/83ZYb/N/+f/zeYuf83mLn/N/+f"),
+"format": 34896613399,
+"index_count": 132,
+"index_data": PackedByteArray("JgAnACgAKAApACYAKQAqACYAKQArACoALAAtAC4ALgAvACwAAQAwADEAMQAyAAEAMwA0ADUANQACADMABwA2ADcANwAFAAcAOAA5ADoAOgA7ADgAPAA9AAYABgA+ADwAPwBAAEEAQQBCAD8AQwBEAAQABAAAAEMARQADAEYARgBHAEUASABJAEoASgBLAEgATABNAE4ATgBPAEwAUABRAFIAUgBTAFAACAAJAAoACgALAAgADAANAA4ADgAPAAwADwAQAAwADwARABAAEgATABQAFAAVABIAFgAXABgAGAAZABYAGgAbABwAHAAdABoAHgAfACAAIAAhAB4AIgAjACQAJAAlACIA"),
+"lods": [0.556171, PackedByteArray("AAABAAIAAwABAAAAAAACAAQAAQADAAUAAgAGAAQAAQAFAAcABgACAAcAAQAHAAIACAAJAAoACgALAAgADAANAA4ADgAPAAwADwAQAAwADwARABAAEgATABQAFAAVABIAFgAXABgAGAAZABYAGgAbABwAHAAdABoAHgAfACAAIAAhAB4AIgAjACQAJAAlACIA")],
+"material": SubResource("StandardMaterial3D_3w7sn"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 84,
+"vertex_data": PackedByteArray("XPT/fy26oLD/f///XPQSlP9///+iC+z9/3//f1z0EpRc9P9/0UWt1KIL/38tuqCw/3//f6IL7P2iC/9/0UWt1P9//39c9FSV/38AAFz0VJWiCwAALbpUlaIL/38tulSV/38AAFz0/79c9AAALbr/v1z0AADRRf+//38AAKIL/7+iCwAALbr/v6ILAADRRf+/XPT/fy26VJVc9AAALbpUlf9/AABc9FSV/3//f1z0VJWiC/9/0UWp6qILAADRRanq/38AAKILqer/f/9/ogup6v9//3+iC6nq/38AAKILqepc9AAA0UWp6lz0/3/RRanqogsAAC26/7+iCwAA0UX/v6IL/3/RRf+/ogv/fy26/79c9P9/Lbr/v1z0/3/RRf+/XPQAANFF/79c9AAALbr/v/9///+iC///XPT//9FF//9c9P//Lbr///9///9c9P//ogv//9FF//+iC///Lbr//1z0///RRa3U////v/8/VNX///+//7+pqlz0//8tuqCw/3//v///AIAAAP+//7+pqqIL//8tus2sogv//9FFyNgAAP+//z9U1f9//78AAP//AAD/v/8/VNUAAP+//7+pqgAA/7//v6mqAAD/v/8/VNWiC///0UWt1KIL//8tuqCwAAD/v/8/VNWiC/9/0UXI2P9//78AAP///3///6IL7P3/f/+/AAD//////7//P1TVXPT//9FFyNj///+//7+pqv///7//P1TV/3//v///AICiC/9/LbrNrAAA/7//v6mq/3//vwAA////f/9/ogvs/Vz0/3/RRcjY////v/8/VNVc9P//LbrNrP///7//v6mq/3//v///AID/f///XPQSlP///7//v6mqXPT/fy26zaz/f/9/XPQSlP9//7///wCAsmzLMgDNL4lni5XfMAn9sjFpxyQ0TbHslV+X9DdbMen/f////3////9/////f///AAD/fwAA/38AAP9/AAD/fwAA/38AAP9//38AAP9/AAD/fwAA/38AAP9/////f////3////9/////fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f/+//3//v/9//7//f/+//3//v/9//7/HpM0W/38AAP9/AADKsk0T/3////9///+aqz/TvIAU4/9/////f////3////9/////f////3///82WN9tMkzPN/3///xVjQf//f///aaBnC/9/////fwAA6Zy9AP9/AAD/fwAA/3///z9TZNT/f////3///5d0aSBCf+oc/38AAL+smiv/fwAA/3///872AU3/fwAAZFS/LP4yz3b/f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_fll3k")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_06jdw"]
+data = PackedVector3Array(0, 0.5, -0.57739997, 0.5, 0.5, -0.28869998, 0.5, 0.5, 0.28869998, 0.5, 0.5, 0.28869998, 0, 0.5, 0.5773, 0, 0.5, -0.57739997, 0, 0.5, 0.5773, -0.5, 0.5, -0.28869998, 0, 0.5, -0.57739997, 0, 0.5, 0.5773, -0.5, 0.5, 0.28869998, -0.5, 0.5, -0.28869998, 0.5, 0.5, -0.28869998, 0.55, 0.375, -0.31759998, 0.55, 0.375, 0.3175, 0.55, 0.375, 0.3175, 0.5, 0.5, 0.28869998, 0.5, 0.5, -0.28869998, 0, 0.5, 0.5773, 0, 0.375, 0.6351, -0.55, 0.375, 0.3175, -0.55, 0.375, 0.3175, -0.5, 0.5, 0.28869998, 0, 0.5, 0.5773, -0.5, 0.5, -0.28869998, -0.55, 0.375, -0.31759998, 0, 0.375, -0.6351, 0, 0.375, -0.6351, 0, 0.5, -0.57739997, -0.5, 0.5, -0.28869998, -0.5, 0.25, -0.28869998, -0.55, 0.375, -0.31759998, -0.55, 0.375, 0.3175, -0.55, 0.375, 0.3175, -0.5, 0.25, 0.28869998, -0.5, 0.25, -0.28869998, -0.55, 0.375, 0.3175, -0.55, 0.375, -0.31759998, -0.5, 0.5, -0.28869998, -0.5, 0.5, -0.28869998, -0.5, 0.5, 0.28869998, -0.55, 0.375, 0.3175, -0.55, 0.375, -0.31759998, -0.5, 0.25, -0.28869998, 0, 0.25, -0.57739997, 0, 0.25, -0.57739997, 0, 0.375, -0.6351, -0.55, 0.375, -0.31759998, 0, 0.5, -0.57739997, 0, 0.375, -0.6351, 0.55, 0.375, -0.31759998, 0.55, 0.375, -0.31759998, 0.5, 0.5, -0.28869998, 0, 0.5, -0.57739997, 0.55, 0.375, 0.3175, 0.55, 0.375, -0.31759998, 0.5, 0.25, -0.28869998, 0.5, 0.25, -0.28869998, 0.5, 0.25, 0.28869998, 0.55, 0.375, 0.3175, 0, 0.375, 0.6351, 0, 0.25, 0.5773, -0.5, 0.25, 0.28869998, -0.5, 0.25, 0.28869998, -0.55, 0.375, 0.3175, 0, 0.375, 0.6351, 0, 0.375, -0.6351, 0, 0.25, -0.57739997, 0.5, 0.25, -0.28869998, 0.5, 0.25, -0.28869998, 0.55, 0.375, -0.31759998, 0, 0.375, -0.6351, 0.5, 0.5, 0.28869998, 0.55, 0.375, 0.3175, 0, 0.375, 0.6351, 0, 0.375, 0.6351, 0, 0.5, 0.5773, 0.5, 0.5, 0.28869998, 0.55, 0.375, 0.3175, 0.5, 0.25, 0.28869998, 0, 0.25, 0.5773, 0, 0.25, 0.5773, 0, 0.375, 0.6351, 0.55, 0.375, 0.3175, 0, 0.25, 0.5773, 0, 0, 0.5773, -0.5, 0, 0.28869998, -0.5, 0, 0.28869998, -0.5, 0.25, 0.28869998, 0, 0.25, 0.5773, 0, 0, 0.5773, 0.5, 0, 0.28869998, 0.5, 0, -0.28869998, 0.5, 0, -0.28869998, 0, 0, -0.57739997, 0, 0, 0.5773, 0, 0, -0.57739997, -0.5, 0, 0.28869998, 0, 0, 0.5773, 0, 0, -0.57739997, -0.5, 0, -0.28869998, -0.5, 0, 0.28869998, 0.5, 0.25, 0.28869998, 0.5, 0, 0.28869998, 0, 0, 0.5773, 0, 0, 0.5773, 0, 0.25, 0.5773, 0.5, 0.25, 0.28869998, -0.5, 0.25, -0.28869998, -0.5, 0, -0.28869998, 0, 0, -0.57739997, 0, 0, -0.57739997, 0, 0.25, -0.57739997, -0.5, 0.25, -0.28869998, 0, 0.25, -0.57739997, 0, 0, -0.57739997, 0.5, 0, -0.28869998, 0.5, 0, -0.28869998, 0.5, 0.25, -0.28869998, 0, 0.25, -0.57739997, -0.5, 0, 0.28869998, -0.5, 0, -0.28869998, -0.5, 0.25, -0.28869998, -0.5, 0.25, -0.28869998, -0.5, 0.25, 0.28869998, -0.5, 0, 0.28869998, 0.5, 0.25, 0.28869998, 0.5, 0.25, -0.28869998, 0.5, 0, -0.28869998, 0.5, 0, -0.28869998, 0.5, 0, 0.28869998, 0.5, 0.25, 0.28869998)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ypq2k"]
+
+[node name="World" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.9052467, 0.42100278, 0.057316184, 0.06262222, -0.0012233744, 0.9980367, 0.42024633, 0.90705866, -0.02525666, 36.940693, 59.218838, 0.4945736)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rljl1")
+
+[node name="CameraPivot" type="Node3D" parent="."]
+script = ExtResource("2_4r8rk")
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+transform = Transform3D(0.118995294, -0.74811924, 0.65280765, 0.0989228, 0.6631408, 0.74192905, -0.9879547, -0.023708504, 0.15291667, 0, 10, 5)
+
+[node name="chão" type="Node3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 50, 0, 0, 0, 100, 0.08300686, -24.618504, 0.13347912)
+metadata/_edit_group_ = true
+
+[node name="block-grass-low-hexagon" type="MeshInstance3D" parent="chão"]
+mesh = SubResource("ArrayMesh_u0os5")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="chão/block-grass-low-hexagon"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="chão/block-grass-low-hexagon/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_06jdw")
+
+[node name="farm" parent="." instance=ExtResource("3_ks8n1")]
+transform = Transform3D(0.20000005, 0, -3.7252903e-09, 0, 0.2, 0, 3.7252903e-09, 0, 0.20000005, 8.516951, 0.59458923, 3.010801)
+
+[node name="Florest" type="Node3D" parent="."]
+transform = Transform3D(1.0000004, 0, -4.4703484e-08, 0, 1, 0, 4.4703484e-08, 0, 1.0000004, -1.4305115e-06, -24.618504, -5.9604645e-08)
+
+[node name="Florest BigGroup" type="Node3D" parent="Florest"]
+transform = Transform3D(0.99924946, 0, -0.038736615, 0, 1, 0, 0.038736615, 0, 0.99924946, 0, 0, -15.977511)
+
+[node name="Flores Group" type="Node3D" parent="Florest/Florest BigGroup"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 0.6189147, 0, 15.96552)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup/Flores Group" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup/Flores Group" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup/Flores Group" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup/Flores Group" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup/Flores Group" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup/Flores Group" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup/Flores Group" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group2" type="Node3D" parent="Florest/Florest BigGroup"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 1.1084764, 0, 28.59425)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup/Flores Group2" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup/Flores Group2" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup/Flores Group2" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup/Flores Group2" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup/Flores Group2" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup/Flores Group2" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup/Flores Group2" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group3" type="Node3D" parent="Florest/Florest BigGroup"]
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup/Flores Group3" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup/Flores Group3" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup/Flores Group3" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup/Flores Group3" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup/Flores Group3" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup/Flores Group3" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup/Flores Group3" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group4" type="Node3D" parent="Florest/Florest BigGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5634893, 0, -14.535768)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup/Flores Group4" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup/Flores Group4" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup/Flores Group4" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup/Flores Group4" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup/Flores Group4" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup/Flores Group4" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup/Flores Group4" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Florest BigGroup2" type="Node3D" parent="Florest"]
+transform = Transform3D(0.99924946, 0, -0.038736615, 0, 1, 0, 0.038736615, 0, 0.99924946, -92.59614, 0, -15.977511)
+
+[node name="Flores Group" type="Node3D" parent="Florest/Florest BigGroup2"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 0.6189147, 0, 15.96552)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup2/Flores Group" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup2/Flores Group" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup2/Flores Group" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup2/Flores Group" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup2/Flores Group" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup2/Flores Group" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup2/Flores Group" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group2" type="Node3D" parent="Florest/Florest BigGroup2"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 1.1084764, 0, 28.59425)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup2/Flores Group2" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup2/Flores Group2" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup2/Flores Group2" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup2/Flores Group2" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup2/Flores Group2" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup2/Flores Group2" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup2/Flores Group2" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group3" type="Node3D" parent="Florest/Florest BigGroup2"]
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup2/Flores Group3" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup2/Flores Group3" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup2/Flores Group3" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup2/Flores Group3" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup2/Flores Group3" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup2/Flores Group3" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup2/Flores Group3" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group4" type="Node3D" parent="Florest/Florest BigGroup2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5634893, 0, -14.535768)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup2/Flores Group4" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup2/Flores Group4" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup2/Flores Group4" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup2/Flores Group4" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup2/Flores Group4" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup2/Flores Group4" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup2/Flores Group4" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Florest BigGroup3" type="Node3D" parent="Florest"]
+transform = Transform3D(0.99924946, 0, -0.038736615, 0, 1, 0, 0.038736615, 0, 0.99924946, -86.5623, 0, -15.977511)
+
+[node name="Flores Group" type="Node3D" parent="Florest/Florest BigGroup3"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 0.6189147, 0, 15.96552)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup3/Flores Group" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup3/Flores Group" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup3/Flores Group" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup3/Flores Group" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup3/Flores Group" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup3/Flores Group" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup3/Flores Group" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group2" type="Node3D" parent="Florest/Florest BigGroup3"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 1.1084764, 0, 28.59425)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup3/Flores Group2" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup3/Flores Group2" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup3/Flores Group2" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup3/Flores Group2" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup3/Flores Group2" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup3/Flores Group2" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup3/Flores Group2" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group3" type="Node3D" parent="Florest/Florest BigGroup3"]
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup3/Flores Group3" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup3/Flores Group3" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup3/Flores Group3" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup3/Flores Group3" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup3/Flores Group3" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup3/Flores Group3" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup3/Flores Group3" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group4" type="Node3D" parent="Florest/Florest BigGroup3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5634893, 0, -14.535768)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup3/Flores Group4" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup3/Flores Group4" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup3/Flores Group4" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup3/Flores Group4" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup3/Flores Group4" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup3/Flores Group4" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup3/Flores Group4" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Florest BigGroup4" type="Node3D" parent="Florest"]
+transform = Transform3D(0.99924946, 0, -0.038736615, 0, 1, 0, 0.038736615, 0, 0.99924946, -8.206291, 0, -15.977511)
+
+[node name="Flores Group" type="Node3D" parent="Florest/Florest BigGroup4"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 0.6189147, 0, 15.96552)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup4/Flores Group" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup4/Flores Group" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup4/Flores Group" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup4/Flores Group" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup4/Flores Group" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup4/Flores Group" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup4/Flores Group" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group2" type="Node3D" parent="Florest/Florest BigGroup4"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 1.1084764, 0, 28.59425)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup4/Flores Group2" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup4/Flores Group2" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup4/Flores Group2" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup4/Flores Group2" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup4/Flores Group2" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup4/Flores Group2" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup4/Flores Group2" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group3" type="Node3D" parent="Florest/Florest BigGroup4"]
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup4/Flores Group3" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup4/Flores Group3" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup4/Flores Group3" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup4/Flores Group3" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup4/Flores Group3" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup4/Flores Group3" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup4/Flores Group3" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group4" type="Node3D" parent="Florest/Florest BigGroup4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5634893, 0, -14.535768)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup4/Flores Group4" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup4/Flores Group4" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup4/Flores Group4" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup4/Flores Group4" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup4/Flores Group4" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup4/Flores Group4" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup4/Flores Group4" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Florest BigGroup5" type="Node3D" parent="Florest"]
+transform = Transform3D(0.5955521, 0, 0.8033167, 0, 1, 0, -0.8033167, 0, 0.5955521, -21.84947, 0, -13.888614)
+
+[node name="Flores Group" type="Node3D" parent="Florest/Florest BigGroup5"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 0.6189147, 0, 15.96552)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup5/Flores Group" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup5/Flores Group" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup5/Flores Group" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup5/Flores Group" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup5/Flores Group" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup5/Flores Group" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup5/Flores Group" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group2" type="Node3D" parent="Florest/Florest BigGroup5"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 1.1084764, 0, 28.59425)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup5/Flores Group2" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup5/Flores Group2" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup5/Flores Group2" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup5/Flores Group2" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup5/Flores Group2" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup5/Flores Group2" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup5/Flores Group2" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group3" type="Node3D" parent="Florest/Florest BigGroup5"]
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup5/Flores Group3" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup5/Flores Group3" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup5/Flores Group3" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup5/Flores Group3" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup5/Flores Group3" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup5/Flores Group3" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup5/Flores Group3" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group4" type="Node3D" parent="Florest/Florest BigGroup5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5634893, 0, -14.535768)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup5/Flores Group4" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup5/Flores Group4" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup5/Flores Group4" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup5/Flores Group4" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup5/Flores Group4" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup5/Flores Group4" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup5/Flores Group4" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Florest BigGroup6" type="Node3D" parent="Florest"]
+transform = Transform3D(0.5955521, 0, 0.8033167, 0, 1, 0, -0.8033167, 0, 0.5955521, -21.84947, 0, -8.334125)
+
+[node name="Flores Group" type="Node3D" parent="Florest/Florest BigGroup6"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 0.6189147, 0, 15.96552)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup6/Flores Group" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup6/Flores Group" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup6/Flores Group" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup6/Flores Group" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup6/Flores Group" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup6/Flores Group" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup6/Flores Group" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group2" type="Node3D" parent="Florest/Florest BigGroup6"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 1.1084764, 0, 28.59425)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup6/Flores Group2" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup6/Flores Group2" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup6/Flores Group2" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup6/Flores Group2" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup6/Flores Group2" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup6/Flores Group2" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup6/Flores Group2" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group3" type="Node3D" parent="Florest/Florest BigGroup6"]
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup6/Flores Group3" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup6/Flores Group3" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup6/Flores Group3" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup6/Flores Group3" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup6/Flores Group3" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup6/Flores Group3" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup6/Flores Group3" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group4" type="Node3D" parent="Florest/Florest BigGroup6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5634893, 0, -14.535768)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup6/Flores Group4" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup6/Flores Group4" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup6/Flores Group4" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup6/Flores Group4" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup6/Flores Group4" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup6/Flores Group4" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup6/Flores Group4" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Florest BigGroup7" type="Node3D" parent="Florest"]
+transform = Transform3D(-0.4395316, 0, 0.89822716, 0, 1, 0, -0.89822716, 0, -0.4395316, -21.84947, 0, 9.676824)
+
+[node name="Flores Group" type="Node3D" parent="Florest/Florest BigGroup7"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 0.6189147, 0, 15.96552)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup7/Flores Group" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup7/Flores Group" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup7/Flores Group" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup7/Flores Group" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup7/Flores Group" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup7/Flores Group" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup7/Flores Group" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group2" type="Node3D" parent="Florest/Florest BigGroup7"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 1.1084764, 0, 28.59425)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup7/Flores Group2" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup7/Flores Group2" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup7/Flores Group2" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup7/Flores Group2" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup7/Flores Group2" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup7/Flores Group2" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup7/Flores Group2" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group3" type="Node3D" parent="Florest/Florest BigGroup7"]
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup7/Flores Group3" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup7/Flores Group3" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup7/Flores Group3" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup7/Flores Group3" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup7/Flores Group3" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup7/Flores Group3" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup7/Flores Group3" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group4" type="Node3D" parent="Florest/Florest BigGroup7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5634893, 0, -14.535768)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup7/Flores Group4" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup7/Flores Group4" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup7/Flores Group4" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup7/Flores Group4" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup7/Flores Group4" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup7/Flores Group4" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup7/Flores Group4" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Florest BigGroup8" type="Node3D" parent="Florest"]
+transform = Transform3D(-0.4395316, 0, 0.89822716, 0, 1, 0, -0.89822716, 0, -0.4395316, -15.847319, 0, 14.984899)
+
+[node name="Flores Group" type="Node3D" parent="Florest/Florest BigGroup8"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 0.6189147, 0, 15.96552)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup8/Flores Group" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup8/Flores Group" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup8/Flores Group" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup8/Flores Group" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup8/Flores Group" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup8/Flores Group" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup8/Flores Group" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group2" type="Node3D" parent="Florest/Florest BigGroup8"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 1.1084764, 0, 28.59425)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup8/Flores Group2" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup8/Flores Group2" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup8/Flores Group2" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup8/Flores Group2" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup8/Flores Group2" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup8/Flores Group2" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup8/Flores Group2" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group3" type="Node3D" parent="Florest/Florest BigGroup8"]
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup8/Flores Group3" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup8/Flores Group3" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup8/Flores Group3" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup8/Flores Group3" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup8/Flores Group3" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup8/Flores Group3" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup8/Flores Group3" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group4" type="Node3D" parent="Florest/Florest BigGroup8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5634893, 0, -14.535768)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup8/Flores Group4" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup8/Flores Group4" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup8/Flores Group4" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup8/Flores Group4" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup8/Flores Group4" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup8/Flores Group4" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup8/Flores Group4" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Florest BigGroup9" type="Node3D" parent="Florest"]
+transform = Transform3D(-0.5399467, 0, -0.8416992, 0, 1, 0, 0.8416992, 0, -0.5399467, 13.261759, 0, 10.143875)
+
+[node name="Flores Group" type="Node3D" parent="Florest/Florest BigGroup9"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 0.6189147, 0, 15.96552)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup9/Flores Group" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup9/Flores Group" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup9/Flores Group" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup9/Flores Group" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup9/Flores Group" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup9/Flores Group" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup9/Flores Group" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group2" type="Node3D" parent="Florest/Florest BigGroup9"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 1.1084764, 0, 28.59425)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup9/Flores Group2" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup9/Flores Group2" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup9/Flores Group2" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup9/Flores Group2" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup9/Flores Group2" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup9/Flores Group2" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup9/Flores Group2" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group3" type="Node3D" parent="Florest/Florest BigGroup9"]
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup9/Flores Group3" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup9/Flores Group3" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup9/Flores Group3" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup9/Flores Group3" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup9/Flores Group3" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup9/Flores Group3" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup9/Flores Group3" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group4" type="Node3D" parent="Florest/Florest BigGroup9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5634893, 0, -14.535768)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup9/Flores Group4" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup9/Flores Group4" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup9/Flores Group4" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup9/Flores Group4" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup9/Flores Group4" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup9/Flores Group4" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup9/Flores Group4" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Florest BigGroup10" type="Node3D" parent="Florest"]
+transform = Transform3D(-0.5399467, 0, -0.8416992, 0, 1, 0, 0.8416992, 0, -0.5399467, 17.626371, 0, 5.0053177)
+
+[node name="Flores Group" type="Node3D" parent="Florest/Florest BigGroup10"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 0.6189147, 0, 15.96552)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup10/Flores Group" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup10/Flores Group" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup10/Flores Group" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup10/Flores Group" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup10/Flores Group" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup10/Flores Group" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup10/Flores Group" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group2" type="Node3D" parent="Florest/Florest BigGroup10"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 1.1084764, 0, 28.59425)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup10/Flores Group2" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup10/Flores Group2" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup10/Flores Group2" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup10/Flores Group2" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup10/Flores Group2" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup10/Flores Group2" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup10/Flores Group2" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group3" type="Node3D" parent="Florest/Florest BigGroup10"]
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup10/Flores Group3" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup10/Flores Group3" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup10/Flores Group3" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup10/Flores Group3" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup10/Flores Group3" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup10/Flores Group3" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup10/Flores Group3" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group4" type="Node3D" parent="Florest/Florest BigGroup10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5634893, 0, -14.535768)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup10/Flores Group4" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup10/Flores Group4" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup10/Flores Group4" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup10/Flores Group4" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup10/Flores Group4" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup10/Flores Group4" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup10/Flores Group4" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Florest BigGroup11" type="Node3D" parent="Florest"]
+transform = Transform3D(0.50377387, 0, -0.8638357, 0, 1, 0, 0.8638357, 0, 0.50377387, 10.594877, 0, -7.6876793)
+
+[node name="Flores Group" type="Node3D" parent="Florest/Florest BigGroup11"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 0.6189147, 0, 15.96552)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup11/Flores Group" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup11/Flores Group" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup11/Flores Group" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup11/Flores Group" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup11/Flores Group" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup11/Flores Group" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup11/Flores Group" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group2" type="Node3D" parent="Florest/Florest BigGroup11"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 1.1084764, 0, 28.59425)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup11/Flores Group2" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup11/Flores Group2" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup11/Flores Group2" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup11/Flores Group2" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup11/Flores Group2" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup11/Flores Group2" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup11/Flores Group2" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group3" type="Node3D" parent="Florest/Florest BigGroup11"]
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup11/Flores Group3" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup11/Flores Group3" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup11/Flores Group3" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup11/Flores Group3" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup11/Flores Group3" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup11/Flores Group3" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup11/Flores Group3" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group4" type="Node3D" parent="Florest/Florest BigGroup11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5634893, 0, -14.535768)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup11/Flores Group4" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup11/Flores Group4" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup11/Flores Group4" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup11/Flores Group4" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup11/Flores Group4" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup11/Flores Group4" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup11/Flores Group4" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Florest BigGroup12" type="Node3D" parent="Florest"]
+transform = Transform3D(0.50377387, 0, -0.8638357, 0, 1, 0, 0.8638357, 0, 0.50377387, 8.235373, 0, -12.743641)
+
+[node name="Flores Group" type="Node3D" parent="Florest/Florest BigGroup12"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 0.6189147, 0, 15.96552)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup12/Flores Group" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup12/Flores Group" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup12/Flores Group" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup12/Flores Group" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup12/Flores Group" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup12/Flores Group" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup12/Flores Group" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group2" type="Node3D" parent="Florest/Florest BigGroup12"]
+transform = Transform3D(0.99924946, 0, 0.038736615, 0, 1, 0, -0.038736615, 0, 0.99924946, 1.1084764, 0, 28.59425)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup12/Flores Group2" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup12/Flores Group2" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup12/Flores Group2" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup12/Flores Group2" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup12/Flores Group2" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup12/Flores Group2" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup12/Flores Group2" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group3" type="Node3D" parent="Florest/Florest BigGroup12"]
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup12/Flores Group3" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup12/Flores Group3" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup12/Flores Group3" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup12/Flores Group3" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup12/Flores Group3" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup12/Flores Group3" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup12/Flores Group3" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group4" type="Node3D" parent="Florest/Florest BigGroup12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5634893, 0, -14.535768)
+
+[node name="pinheiro_magro" parent="Florest/Florest BigGroup12/Flores Group4" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Florest BigGroup12/Flores Group4" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Florest BigGroup12/Flores Group4" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Florest BigGroup12/Flores Group4" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Florest BigGroup12/Flores Group4" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Florest BigGroup12/Flores Group4" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Florest BigGroup12/Flores Group4" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Flores Group5" type="Node3D" parent="Florest"]
+transform = Transform3D(0.6461373, 0, 0.7632212, 0, 1, 0, -0.7632212, 0, 0.6461373, 3.88204, 0, -0.68382645)
+
+[node name="pinheiro_magro" parent="Florest/Flores Group5" instance=ExtResource("5_v0p3n")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 44.042698, 25, 4.332082)
+
+[node name="pinheiro_gordo" parent="Florest/Flores Group5" instance=ExtResource("6_ypq2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.103786, 25, 12.028157)
+
+[node name="Pinehrio Mini" parent="Florest/Flores Group5" instance=ExtResource("7_4r8rk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.23036, 25, -1.7086229)
+
+[node name="Pinheiro Torto" parent="Florest/Flores Group5" instance=ExtResource("8_44brb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.75751, 24.908533, 1.3535113)
+
+[node name="pinheiro Gordinho" parent="Florest/Flores Group5" instance=ExtResource("9_ju8gl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.83161, 25.10473, 12.910188)
+
+[node name="Pinheiro Alto" parent="Florest/Flores Group5" instance=ExtResource("10_4eob5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.44173, 25.014675, 17.928925)
+
+[node name="Pinheiro Super" parent="Florest/Flores Group5" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 46.886436, 25, 7.157688)
+
+[node name="Pinheiro Super2" parent="Florest/Flores Group5" instance=ExtResource("11_ikoig")]
+transform = Transform3D(1.5, 0, -5.9604645e-08, 0, 1.5, 0, 5.9604645e-08, 0, 1.5, 43.44307, 25, 3.0903645)
+
+[node name="pinheiro_medio" parent="Florest" instance=ExtResource("3_ay5oo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.905773, 25, 15.911171)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(0.17364822, 0, 0.9848077, 0, 1, 0, -0.9848077, 0, 0.17364822, 5.2751036, 0.37444115, 0)
+script = ExtResource("12_ypq2k")
+
+[node name="player Running" parent="CharacterBody3D" instance=ExtResource("12_v0p3n")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9278897, 0)
+shape = SubResource("CapsuleShape3D_ypq2k")
+debug_color = Color(0.969585, 0.1373497, 0.28517547, 0.41960785)

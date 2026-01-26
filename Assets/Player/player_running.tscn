@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbgjx12rk3xv3"]
+
+[ext_resource type="PackedScene" uid="uid://blfec734bw25w" path="res://Assets/Player/player Running.fbx" id="1_srpyk"]
+
+[node name="player Running" instance=ExtResource("1_srpyk")]
