@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://b7onvidn583lo"]
+
+[ext_resource type="PackedScene" uid="uid://rbx8rso730uo" path="res://Assets/Player/Player_Full.fbx" id="1_8dwk4"]
+[ext_resource type="Script" uid="uid://csbruw4jhs5au" path="res://Script/Player.gd" id="2_0mqnh"]
+
+[node name="Player_Full" unique_id=1021599860 instance=ExtResource("1_8dwk4")]
+script = ExtResource("2_0mqnh")
+
+[node name="Armature" parent="." index="0" unique_id=1785443736]
+unique_name_in_owner = true
+
+[node name="Skeleton3D" parent="Armature" index="0" unique_id=1469579596]
+unique_name_in_owner = true
+bones/0/position = Vector3(-0.025953403, 0.8274958, 0.0007091146)
+bones/0/rotation = Quaternion(-0.030928703, -0.030664062, -0.013737427, 0.99895674)
+bones/1/rotation = Quaternion(-0.031732228, -0.0023269232, 0.017575275, 0.99933916)
+bones/2/rotation = Quaternion(-0.002773475, -0.0005444435, 0.0031926553, 0.999991)
+bones/3/rotation = Quaternion(-0.0027731075, -0.00052942784, 0.0031943533, 0.99999094)
+bones/4/rotation = Quaternion(0.05748364, 0.0033407307, -0.00014720659, 0.99834085)
+bones/5/rotation = Quaternion(-0.051592704, 0.013939049, 0.008592131, 0.99853396)
+bones/8/rotation = Quaternion(-0.51186866, -0.4434451, 0.631528, -0.37751734)
+bones/9/rotation = Quaternion(0.4879399, 0.25631073, 0.14554568, 0.82160574)
+bones/10/rotation = Quaternion(0.007629088, -0.0067971293, 0.09066844, 0.99582875)
+bones/11/rotation = Quaternion(0.03577689, 0.03923225, -0.032374203, 0.9980646)
+bones/12/rotation = Quaternion(0.12825048, 0.08881262, 0.1523003, 0.97594506)
+bones/13/rotation = Quaternion(-0.019306935, -0.031202316, -0.056735765, 0.9977148)
+bones/14/rotation = Quaternion(0.023893977, -0.06989974, -0.0784001, 0.9941814)
+bones/15/rotation = Quaternion(4.5700297e-08, 3.0322283e-07, 2.543566e-07, 1)
+bones/17/rotation = Quaternion(0.18095912, -0.013528522, 0.05391413, 0.98191863)
+bones/18/rotation = Quaternion(0.12006445, -9.989104e-05, -0.0077049015, 0.9927363)
+bones/19/rotation = Quaternion(0.04340591, 0.0007246461, 0.002875356, 0.9990531)
+bones/20/rotation = Quaternion(2.132956e-07, 1.1159793e-07, 6.892924e-08, 1)
+bones/22/rotation = Quaternion(0.5319342, -0.4397433, 0.6067459, 0.39437446)
+bones/23/rotation = Quaternion(0.5041378, -0.07958, -0.0710082, 0.85701233)
+bones/24/rotation = Quaternion(0.0056466004, 0.007982067, -0.06861248, 0.9975955)
+bones/25/rotation = Quaternion(0.018225228, -0.2827079, -0.03852812, 0.95825875)
+bones/26/rotation = Quaternion(0.08181444, -0.050722975, -0.23022594, 0.9683644)
+bones/27/rotation = Quaternion(0.06625286, 0.13487661, 0.17342064, 0.9733161)
+bones/28/rotation = Quaternion(-0.0313858, 0.041106805, 0.08214978, 0.9952772)
+bones/29/rotation = Quaternion(2.5179182e-07, -1.824964e-07, -1.518347e-07, 1)
+bones/31/rotation = Quaternion(0.21344696, 0.012545424, -0.0917892, 0.97255224)
+bones/32/rotation = Quaternion(0.16359854, -8.129522e-05, 0.00032919116, 0.98652697)
+bones/33/rotation = Quaternion(0.050791252, -0.0013055636, -0.008905088, 0.99866873)
+bones/34/rotation = Quaternion(3.143323e-07, 4.8876025e-08, -1.0397072e-07, 1)
+bones/36/rotation = Quaternion(0.1322357, 0.08405585, 0.98401064, -0.08468503)
+bones/37/rotation = Quaternion(-0.31200105, -0.07520981, 0.071753785, 0.94437826)
+bones/38/rotation = Quaternion(0.5805196, -0.21336856, 0.015946444, 0.78563136)
+bones/39/rotation = Quaternion(0.28280228, -0.06667153, 0.019708209, 0.9566553)
+bones/42/rotation = Quaternion(-0.122874856, 0.07825627, 0.98794633, 0.052343287)
+bones/43/rotation = Quaternion(-0.29926413, 0.048529487, -0.058622602, 0.95113057)
+bones/44/rotation = Quaternion(0.5845476, 0.19050749, -0.02869716, 0.7881545)
+bones/45/rotation = Quaternion(0.28464657, 0.06945016, -0.020674268, 0.95589)
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="Armature/Skeleton3D" index="0" unique_id=379177357]
+unique_name_in_owner = true
+transform = Transform3D(0.57395667, -0.11373364, 0.8109483, 0.2216087, -0.93178177, -0.28752598, 0.78832877, 0.3447409, -0.5095981, -0.30885416, 0.7764866, 0.017212171)
+bone_name = "mixamorig_RightHand"
+bone_idx = 25
+
+[node name="Muzzle" type="Marker3D" parent="Armature/Skeleton3D/BoneAttachment3D" index="0" unique_id=1705567166]
+unique_name_in_owner = true
+
+[node name="model" parent="Armature/Skeleton3D" index="1" unique_id=2122057744]
+unique_name_in_owner = true
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1841170495]
+unique_name_in_owner = true

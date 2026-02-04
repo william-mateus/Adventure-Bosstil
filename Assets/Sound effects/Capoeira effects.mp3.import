@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bllbirc56sif6"
+path="res://.godot/imported/Capoeira effects.mp3-b7802ed655fe7d40ebdf07fcf43d5967.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound effects/Capoeira effects.mp3"
+dest_files=["res://.godot/imported/Capoeira effects.mp3-b7802ed655fe7d40ebdf07fcf43d5967.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

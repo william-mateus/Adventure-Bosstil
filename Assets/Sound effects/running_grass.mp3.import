@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ld0b7glt2ejy"
+path="res://.godot/imported/running_grass.mp3-76857d3c5d6df4b3079b0c7b7c803231.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound effects/running_grass.mp3"
+dest_files=["res://.godot/imported/running_grass.mp3-76857d3c5d6df4b3079b0c7b7c803231.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

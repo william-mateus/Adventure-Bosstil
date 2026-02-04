@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bwmrwk7vi8enk"]
+
+[ext_resource type="Script" uid="uid://ccw38e717echr" path="res://Script/clounds.gd" id="1_40mq1"]
+[ext_resource type="PackedScene" uid="uid://dui6a8lecmwdb" path="res://Assets/kit_kenny/GLB format/clouds.fbx" id="2_jpb6a"]
+
+[node name="Clounds" type="Node3D" unique_id=1594356415]
+script = ExtResource("1_40mq1")
+
+[node name="clouds3" parent="." unique_id=342361680 instance=ExtResource("2_jpb6a")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -4.4870872, 24.770744, 44.9934)
+
+[node name="clouds2" parent="." unique_id=354660386 instance=ExtResource("2_jpb6a")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 12.44944, 24.770744, -20.20948)
+
+[node name="clouds7" parent="." unique_id=1323725014 instance=ExtResource("2_jpb6a")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -17.378777, 24.770744, -12.791294)
+
+[node name="clouds8" parent="." unique_id=1501626870 instance=ExtResource("2_jpb6a")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -17.378777, 24.770744, 10.170383)
+
+[node name="clouds9" parent="." unique_id=1018183133 instance=ExtResource("2_jpb6a")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 8.163755, 24.770744, 33.429344)
+
+[node name="clouds10" parent="." unique_id=1487335742 instance=ExtResource("2_jpb6a")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 35.233, 24.770744, 16.471233)
+
+[node name="clouds4" parent="." unique_id=1287818144 instance=ExtResource("2_jpb6a")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.815739, 24.770744, 15.733593)
+
+[node name="clouds" parent="." unique_id=128240245 instance=ExtResource("2_jpb6a")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 36.451576, 24.770744, 15.733593)
+
+[node name="clouds5" parent="." unique_id=1401976995 instance=ExtResource("2_jpb6a")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 57.18349, 15.16367, 30.894283)
+
+[node name="clouds6" parent="." unique_id=1008194428 instance=ExtResource("2_jpb6a")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 10.627285, 15.16367, -3.0909996)

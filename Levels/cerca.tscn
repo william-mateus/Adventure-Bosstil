@@ -1,0 +1,180 @@
+[gd_scene format=3 uid="uid://38xxp8m7uqe0"]
+
+[ext_resource type="PackedScene" uid="uid://rsk2c4m2jkur" path="res://Assets/kit_kenny/TSN format/cerca_quebrada.tscn" id="1_m3amp"]
+
+[node name="cerca" type="Node3D" unique_id=1815768306]
+metadata/_edit_group_ = true
+
+[node name="fence-broken10" parent="." unique_id=1147187033 instance=ExtResource("1_m3amp")]
+transform = Transform3D(3.3350632, 0.111488126, 2.197188, -0.058489926, 1.9935408, -0.31583875, -2.2076983, 0.115603596, 3.3275533, -30.783846, 0.38149643, -28.186613)
+
+[node name="fence-broken11" parent="." unique_id=360313780 instance=ExtResource("1_m3amp")]
+transform = Transform3D(2.7321293, 0.13525897, 2.909001, -0.058489896, 1.9935406, -0.3158387, -2.9209664, 0.086595625, 2.7272618, -34.459427, 0.38149643, -25.33855)
+
+[node name="fence-broken12" parent="." unique_id=349632869 instance=ExtResource("1_m3amp")]
+transform = Transform3D(1.2284173, 0.15925658, 3.7933545, -0.058489926, 1.9935408, -0.31583866, -3.8062534, 0.020763565, 1.2291075, -37.152435, 0.38149643, -21.16832)
+
+[node name="fence-broken13" parent="." unique_id=879277827 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.12093997, 0.15874556, 3.9855456, -0.058489926, 1.993541, -0.31583872, -3.997743, -0.024364611, 0.12519181, -38.022987, 0.38149643, -16.600552)
+
+[node name="fence-broken14" parent="." unique_id=420948535 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.12093997, 0.15874556, 3.9855456, -0.058489926, 1.993541, -0.31583872, -3.997743, -0.024364611, 0.12519181, -38.0348, 0.38149643, -12.324619)
+
+[node name="fence-broken15" parent="." unique_id=1426380231 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.12093997, 0.15874556, 3.9855456, -0.058489926, 1.993541, -0.31583872, -3.997743, -0.024364611, 0.12519181, -38.13275, 0.38149643, -7.9423604)
+
+[node name="fence-broken16" parent="." unique_id=768409074 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.12093997, 0.15874556, 3.9855456, -0.058489926, 1.993541, -0.31583872, -3.997743, -0.024364611, 0.12519181, -38.20854, 0.38149643, -3.6804047)
+
+[node name="fence-broken17" parent="." unique_id=517348777 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.12093997, 0.15874556, 3.9855456, -0.058489926, 1.993541, -0.31583872, -3.997743, -0.024364611, 0.12519181, -38.454308, 0.38149643, 1.1849341)
+
+[node name="fence-broken18" parent="." unique_id=1216319109 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.12093997, 0.15874556, 3.9855456, -0.058489926, 1.993541, -0.31583872, -3.997743, -0.024364611, 0.12519181, -38.52856, 0.38149643, 5.457914)
+
+[node name="fence-broken19" parent="." unique_id=1834137234 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.12093997, 0.15874556, 3.9855456, -0.058489926, 1.993541, -0.31583872, -3.997743, -0.024364611, 0.12519181, -38.52856, 0.38149643, 9.461912)
+
+[node name="fence-broken20" parent="." unique_id=195240851 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.12093997, 0.15874556, 3.9855456, -0.058489926, 1.993541, -0.31583872, -3.997743, -0.024364611, 0.12519181, -38.52856, 0.38149643, 12.754471)
+
+[node name="fence-broken21" parent="." unique_id=551356819 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.12093997, 0.15874556, 3.9855456, -0.058489926, 1.993541, -0.31583872, -3.997743, -0.024364611, 0.12519181, -38.52856, 0.38149643, 17.19645)
+
+[node name="fence-broken22" parent="." unique_id=418381302 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.12093997, 0.15874556, 3.9855456, -0.058489926, 1.993541, -0.31583872, -3.997743, -0.024364611, 0.12519181, -38.52856, 0.38149643, 21.448387)
+
+[node name="fence-broken23" parent="." unique_id=642953803 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-3.5051618, 0.05051431, 1.9244833, -0.058489904, 1.9935409, -0.3158387, -1.9262452, -0.1524536, -3.4923651, -35.025837, 0.38149643, 26.03939)
+
+[node name="fence-broken24" parent="." unique_id=1391892585 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-3.5046234, 0.050556883, 1.9254584, -0.058489904, 1.9935409, -0.3158387, -1.9272239, -0.15243949, -3.4918275, -31.198683, 0.38149643, 28.317379)
+
+[node name="fence-broken25" parent="." unique_id=195253142 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-3.5518517, 0.046718143, 1.8372858, -0.058489904, 1.9935409, -0.3158387, -1.8387296, -0.1536594, -3.5390158, -27.415804, 0.38149643, 30.529442)
+
+[node name="fence-broken26" parent="." unique_id=358055298 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-3.5518517, 0.046718143, 1.8372858, -0.058489904, 1.9935409, -0.3158387, -1.8387296, -0.1536594, -3.5390158, -23.762234, 0.38149643, 32.54728)
+
+[node name="fence-broken27" parent="." unique_id=520543740 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-3.5518517, 0.046718143, 1.8372858, -0.058489904, 1.9935409, -0.3158387, -1.8387296, -0.1536594, -3.5390158, -19.47228, 0.38149643, 35.245163)
+
+[node name="fence-broken28" parent="." unique_id=718788826 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-3.5518517, 0.046718143, 1.8372858, -0.058489904, 1.9935409, -0.3158387, -1.8387296, -0.1536594, -3.5390158, -15.669907, 0.38149643, 37.557526)
+
+[node name="fence-broken29" parent="." unique_id=241200588 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-3.5518517, 0.046718143, 1.8372858, -0.058489904, 1.9935409, -0.3158387, -1.8387296, -0.1536594, -3.5390158, -11.782665, 0.38149643, 39.56823)
+
+[node name="fence-broken30" parent="." unique_id=1406537540 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-3.5518517, 0.046718143, 1.8372858, -0.058489904, 1.9935409, -0.3158387, -1.8387296, -0.1536594, -3.5390158, -7.788021, 0.38149643, 41.765575)
+
+[node name="fence-broken31" parent="." unique_id=1286404819 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-3.5518517, 0.046718143, 1.8372858, -0.058489904, 1.9935409, -0.3158387, -1.8387296, -0.1536594, -3.5390158, -3.938694, 0.38149643, 43.771675)
+
+[node name="fence-broken32" parent="." unique_id=532987202 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-3.692413, -0.087611966, -1.5281949, -0.058489896, 1.9935406, -0.31583872, 1.5370946, -0.13460284, -3.6830516, 1.3830833, 0.38149643, 44.20432)
+
+[node name="fence-broken33" parent="." unique_id=2076819357 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-3.692413, -0.087611966, -1.5281949, -0.058489896, 1.9935406, -0.31583872, 1.5370946, -0.13460284, -3.6830516, 5.300724, 0.38149643, 42.730408)
+
+[node name="fence-broken34" parent="." unique_id=236058102 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-3.4250913, -0.106520034, -2.0550833, -0.058489885, 1.9935406, -0.31583875, 2.0652673, -0.1201968, -3.417146, 9.235317, 0.38149643, 40.806313)
+
+[node name="fence-broken35" parent="." unique_id=566849539 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-3.4250913, -0.106520034, -2.0550833, -0.058489885, 1.9935406, -0.31583875, 2.0652673, -0.1201968, -3.417146, 12.64529, 0.38149643, 38.78256)
+
+[node name="fence-broken36" parent="." unique_id=1370903529 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-3.4250913, -0.106520034, -2.0550833, -0.058489885, 1.9935406, -0.31583875, 2.0652673, -0.1201968, -3.417146, 16.505419, 0.38149643, 36.654053)
+
+[node name="fence-broken37" parent="." unique_id=441492377 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-3.4250913, -0.106520034, -2.0550833, -0.058489885, 1.9935406, -0.31583875, 2.0652673, -0.1201968, -3.417146, 20.591297, 0.38149643, 34.482944)
+
+[node name="fence-broken38" parent="." unique_id=438798294 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-3.4250913, -0.106520034, -2.0550833, -0.058489885, 1.9935406, -0.31583875, 2.0652673, -0.1201968, -3.417146, 23.090216, 0.38149643, 32.897335)
+
+[node name="fence-broken39" parent="." unique_id=556463301 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-2.3577623, -0.14476171, -3.2182512, -0.058489818, 1.9935406, -0.31583872, 3.230718, -0.06955461, -2.3543816, 27.29178, 0.38149643, 29.204552)
+
+[node name="fence-broken2" parent="." unique_id=1127282622 instance=ExtResource("1_m3amp")]
+transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 4, 0.6615027, 0.38149643, -40.51638)
+
+[node name="fence-broken3" parent="." unique_id=245145984 instance=ExtResource("1_m3amp")]
+transform = Transform3D(3.9689121, 0.0029380573, 0.49769717, -0.0006761609, 1.9998906, -0.04183186, -0.4977314, 0.020711306, 3.968696, -3.726313, 0.38149643, -40.17264)
+
+[node name="fence-broken4" parent="." unique_id=1732442530 instance=ExtResource("1_m3amp")]
+transform = Transform3D(3.8939228, 0.0074472628, 0.9149557, 0.0028486098, 1.9996266, -0.07722707, -0.91507244, 0.037915327, 3.8931856, -8.140638, 0.38149643, -39.233547)
+
+[node name="fence-broken5" parent="." unique_id=98653295 instance=ExtResource("1_m3amp")]
+transform = Transform3D(3.8939228, 0.0074472628, 0.9149557, 0.0028486098, 1.9996266, -0.07722707, -0.91507244, 0.037915327, 3.8931856, -11.974574, 0.38149643, -38.165035)
+
+[node name="fence-broken6" parent="." unique_id=1518585290 instance=ExtResource("1_m3amp")]
+transform = Transform3D(3.5871937, 0.09599424, 1.7593129, -0.05848993, 1.9935409, -0.31583878, -1.7687906, 0.1287591, 3.5784163, -16.510502, 0.38149643, -36.571636)
+
+[node name="fence-broken8" parent="." unique_id=595127214 instance=ExtResource("1_m3amp")]
+transform = Transform3D(3.5871937, 0.09599424, 1.7593129, -0.05848993, 1.9935409, -0.31583878, -1.7687906, 0.1287591, 3.5784163, -23.451248, 0.38149643, -32.770126)
+
+[node name="fence-broken9" parent="." unique_id=1982805152 instance=ExtResource("1_m3amp")]
+transform = Transform3D(3.3350632, 0.111488126, 2.197188, -0.058489926, 1.9935408, -0.31583875, -2.2076983, 0.115603596, 3.3275533, -27.24609, 0.38149643, -30.287945)
+
+[node name="fence-broken40" parent="." unique_id=1442248471 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-2.3577623, -0.14476171, -3.2182512, -0.058489818, 1.9935406, -0.31583872, 3.230718, -0.06955461, -2.3543816, 30.037203, 0.38149643, 25.433907)
+
+[node name="fence-broken41" parent="." unique_id=1373327386 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-2.3577623, -0.14476171, -3.2182512, -0.058489818, 1.9935406, -0.31583872, 3.230718, -0.06955461, -2.3543816, 32.998917, 0.38149643, 21.751205)
+
+[node name="fence-broken42" parent="." unique_id=614578924 instance=ExtResource("1_m3amp")]
+transform = Transform3D(-2.3577623, -0.14476171, -3.2182512, -0.058489818, 1.9935406, -0.31583872, 3.230718, -0.06955461, -2.3543816, 35.843376, 0.38149643, 17.989155)
+
+[node name="fence-broken43" parent="." unique_id=1296143800 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.10861933, -0.15708625, -3.986164, -0.0584898, 1.9935406, -0.3158387, 3.998098, 0.033432152, 0.10367513, 37.39177, 0.38149643, 12.996279)
+
+[node name="fence-broken44" parent="." unique_id=2072075909 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.10861933, -0.15708625, -3.986164, -0.0584898, 1.9935406, -0.3158387, 3.998098, 0.033432152, 0.10367513, 37.39177, 0.38149643, 8.638411)
+
+[node name="fence-broken45" parent="." unique_id=1736937238 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.10861933, -0.15708625, -3.986164, -0.0584898, 1.9935406, -0.3158387, 3.998098, 0.033432152, 0.10367513, 36.789783, 0.38149643, 4.66203)
+
+[node name="fence-broken46" parent="." unique_id=1677432406 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.10861933, -0.15708625, -3.986164, -0.0584898, 1.9935406, -0.3158387, 3.998098, 0.033432152, 0.10367513, 36.789783, 0.38149643, 0.1771431)
+
+[node name="fence-broken47" parent="." unique_id=1992832606 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.10861933, -0.15708625, -3.986164, -0.0584898, 1.9935406, -0.3158387, 3.998098, 0.033432152, 0.10367513, 36.789783, 0.38149643, -3.9580011)
+
+[node name="fence-broken48" parent="." unique_id=1251929637 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.13143548, -0.15689291, -3.9855072, -0.05848979, 1.9935405, -0.3158387, 3.9974127, 0.034328125, 0.12642325, 36.560738, 0.38149643, -8.468815)
+
+[node name="fence-broken49" parent="." unique_id=1567317886 instance=ExtResource("1_m3amp")]
+transform = Transform3D(0.13143548, -0.15689291, -3.9855072, -0.05848979, 1.9935405, -0.3158387, 3.9974127, 0.034328125, 0.12642325, 36.560738, 0.38149643, -13.102936)
+
+[node name="fence-broken50" parent="." unique_id=821958050 instance=ExtResource("1_m3amp")]
+transform = Transform3D(1.0603756, -0.1445552, -3.8460398, -0.058489796, 1.9935405, -0.3158387, 3.8564472, 0.06998286, 1.0527242, 35.911674, 0.38149643, -17.628092)
+
+[node name="fence-broken51" parent="." unique_id=1327234071 instance=ExtResource("1_m3amp")]
+transform = Transform3D(1.7174624, -0.13011472, -3.6031382, -0.058489796, 1.9935405, -0.3158387, 3.61205, 0.09414862, 1.7081112, 34.443058, 0.38149643, -21.531343)
+
+[node name="fence-broken52" parent="." unique_id=920286066 instance=ExtResource("1_m3amp")]
+transform = Transform3D(3.2661452, -0.067348585, -2.3052444, -0.058489796, 1.9935405, -0.3158387, 2.308436, 0.14580114, 3.253628, 31.110348, 0.38149643, -25.589027)
+
+[node name="fence-broken53" parent="." unique_id=286881916 instance=ExtResource("1_m3amp")]
+transform = Transform3D(3.2661452, -0.067348585, -2.3052444, -0.058489796, 1.9935405, -0.3158387, 2.308436, 0.14580114, 3.253628, 27.748466, 0.38149643, -27.973663)
+
+[node name="fence-broken54" parent="." unique_id=272853673 instance=ExtResource("1_m3amp")]
+transform = Transform3D(3.2661452, -0.067348585, -2.3052444, -0.058489796, 1.9935405, -0.3158387, 2.308436, 0.14580114, 3.253628, 24.10851, 0.38149643, -30.38901)
+
+[node name="fence-broken55" parent="." unique_id=394013183 instance=ExtResource("1_m3amp")]
+transform = Transform3D(3.2661452, -0.067348585, -2.3052444, -0.058489796, 1.9935405, -0.3158387, 2.308436, 0.14580114, 3.253628, 20.72212, 0.38149643, -32.5418)
+
+[node name="fence-broken56" parent="." unique_id=543717410 instance=ExtResource("1_m3amp")]
+transform = Transform3D(3.2661452, -0.067348585, -2.3052444, -0.058489796, 1.9935405, -0.3158387, 2.308436, 0.14580114, 3.253628, 17.1312, 0.38149643, -35.002205)
+
+[node name="fence-broken57" parent="." unique_id=723568467 instance=ExtResource("1_m3amp")]
+transform = Transform3D(3.2661452, -0.067348585, -2.3052444, -0.058489796, 1.9935405, -0.3158387, 2.308436, 0.14580114, 3.253628, 13.625265, 0.38149643, -37.52405)
+
+[node name="fence-broken58" parent="." unique_id=297227830 instance=ExtResource("1_m3amp")]
+transform = Transform3D(3.783059, -0.023683961, -1.2985454, -0.058489807, 1.9935403, -0.3158387, 1.2980925, 0.15884857, 3.7701492, 9.711645, 0.38149643, -39.581177)
+
+[node name="fence-broken59" parent="." unique_id=568138875 instance=ExtResource("1_m3amp")]
+transform = Transform3D(3.996673, 0.023119899, -0.15642011, -0.05848982, 1.9935403, -0.3158387, 0.15226471, 0.15893167, 3.9844425, 5.007188, 0.38149643, -40.522217)
+
+[node name="fence-broken7" parent="." unique_id=993453027 instance=ExtResource("1_m3amp")]
+transform = Transform3D(3.5871937, 0.09599424, 1.7593129, -0.05848993, 1.9935409, -0.31583878, -1.7687906, 0.1287591, 3.5784163, -20.034027, 0.38149643, -34.37578)
