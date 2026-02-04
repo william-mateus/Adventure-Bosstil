@@ -59,6 +59,7 @@ bone_idx = 25
 
 [node name="Muzzle" type="Marker3D" parent="Armature/Skeleton3D/BoneAttachment3D" index="0" unique_id=1705567166]
 unique_name_in_owner = true
+transform = Transform3D(1, 2.9802322e-08, -2.9802322e-08, 0, 1, 1.4901161e-08, -5.9604645e-08, -1.4901161e-08, 0.9999999, -0.022207648, 0.09337479, 0.028813273)
 
 [node name="model" parent="Armature/Skeleton3D" index="1" unique_id=2122057744]
 unique_name_in_owner = true

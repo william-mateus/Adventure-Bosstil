@@ -91,12 +91,17 @@ func _physics_process(delta: float) -> void:
 func shoot():
 	if bullet_scene == null: return
 	
-	# Se o muzzle for nulo, tentamos achar ele pelo nome de novo
 	var target_muzzle = muzzle if muzzle else get_node_or_null("%Muzzle")
 	
 	if target_muzzle:
 		var b = bullet_scene.instantiate()
 		get_tree().root.add_child(b)
-		b.global_transform = target_muzzle.global_transform
+		
+		# Posição vem da mão
+		b.global_position = target_muzzle.global_position
+		
+		# Rotação vem do modelo do personagem (para garantir que vá para frente)
+		# Se o tiro sair de lado, mude para: visual_model.global_rotation
+		b.global_rotation = visual_model.global_rotation 
 	else:
-		print("Erro: Muzzle não encontrado na mão do personagem!")
+		print("Erro: Muzzle não encontrado!")

@@ -49,17 +49,16 @@ radius = 0.2553711
 height = 1.5454102
 
 [node name="bullet" type="Area3D" unique_id=660783283]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 script = ExtResource("1_jtc6o")
 metadata/_edit_group_ = true
 
 [node name="Object_4" type="MeshInstance3D" parent="." unique_id=239902642]
-transform = Transform3D(1000, 0, 0, 0, -9.898306, -999.951, 0, 999.951, -9.898306, -0.043643832, -0.0006063267, -0.5237943)
+transform = Transform3D(999.99994, 0, 0, 0, -4.3711385e-05, -999.99994, 0, 999.99994, -4.3711385e-05, 0, 0, 0)
 mesh = SubResource("ArrayMesh_lat0m")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1683943507]
-transform = Transform3D(1, 0, 0, 0, -0.010017986, 0.9999498, 0, -0.9999498, -0.010017986, -0.039443254, 0.00091717404, 0.1010276)
+transform = Transform3D(1, 0, 0, 0, 0.0666744, 0.9977748, 0, -0.9977748, 0.0666744, -0.039443254, 0.00091717404, 0.1010276)
 shape = SubResource("CapsuleShape3D_tufby")
 
 [node name="Timer" type="Timer" parent="." unique_id=19992520]

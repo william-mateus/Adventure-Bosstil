@@ -1522,11 +1522,13 @@ camera_pivot = NodePath("../CameraPivot")
 [node name="capoeira_effects" type="AudioStreamPlayer" parent="Player_Full" unique_id=27985184]
 unique_name_in_owner = true
 stream = ExtResource("26_d21qu")
+volume_db = -10.0
 parameters/looping = false
 
 [node name="running_effects" type="AudioStreamPlayer" parent="Player_Full" unique_id=2124474428]
 unique_name_in_owner = true
 stream = ExtResource("25_6m1pe")
+volume_db = -10.0
 parameters/looping = false
 
 [node name="Collision" type="CollisionShape3D" parent="Player_Full" unique_id=2065428628]
