@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dpjn5c2nbj3us"]
+
+[ext_resource type="PackedScene" uid="uid://cd8vk2mn8agi5" path="res://Assets/Guns/pistol.glb" id="1_8hlr0"]
+
+[node name="Sketchfab_Scene" unique_id=1894334074 instance=ExtResource("1_8hlr0")]
+
+[node name="Skeleton3D" parent="Sketchfab_model/ee24f2a9c363492bb3eb1a221febccc5_fbx/Object_2/RootNode/Armature/Object_6" parent_id_path=PackedInt32Array(167934588) index="0" unique_id=431673536]
+bones/1/rotation = Quaternion(0.7071068, 0, 0, 0.7071067)
+bones/2/rotation = Quaternion(0.99314094, -4.3673527e-16, -3.5710544e-16, 0.116924345)
+bones/4/rotation = Quaternion(-0.3683562, 2.458573e-16, 2.4585732e-16, 0.9296848)
+bones/6/rotation = Quaternion(0.7071068, -2.8378977e-07, -2.8378975e-07, 0.7071067)
+bones/6/scale = Vector3(1, 1, 1)
+bones/7/rotation = Quaternion(-3.804058e-09, -0.08715553, -9.2765634e-10, 0.9961948)
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=258191158]
+unique_name_in_owner = true

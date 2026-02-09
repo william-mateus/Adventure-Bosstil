@@ -49,6 +49,8 @@ radius = 0.2553711
 height = 1.5454102
 
 [node name="bullet" type="Area3D" unique_id=660783283]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_jtc6o")
 metadata/_edit_group_ = true
 
@@ -58,11 +60,13 @@ mesh = SubResource("ArrayMesh_lat0m")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1683943507]
-transform = Transform3D(1, 0, 0, 0, 0.0666744, 0.9977748, 0, -0.9977748, 0.0666744, -0.039443254, 0.00091717404, 0.1010276)
+transform = Transform3D(1, 0, 0, 0, 0.0666744, 0.9977748, 0, -0.9977748, 0.0666744, -0.039443254, 0.00091717404, 0.62889254)
 shape = SubResource("CapsuleShape3D_tufby")
+debug_color = Color(0.94865614, 0.18568176, 0.34540686, 0.41960785)
 
 [node name="Timer" type="Timer" parent="." unique_id=19992520]
 wait_time = 2.0
 autostart = true
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

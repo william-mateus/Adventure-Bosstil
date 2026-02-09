@@ -2,14 +2,25 @@
 
 [ext_resource type="PackedScene" uid="uid://rbx8rso730uo" path="res://Assets/Player/Player_Full.fbx" id="1_8dwk4"]
 [ext_resource type="Script" uid="uid://csbruw4jhs5au" path="res://Script/Player.gd" id="2_0mqnh"]
+[ext_resource type="AudioStream" uid="uid://7wnc14cv8vjc" path="res://Assets/Sound effects/tiro.mp3" id="3_30ltx"]
+[ext_resource type="PackedScene" uid="uid://cd8vk2mn8agi5" path="res://Assets/Guns/pistol.glb" id="3_la1u1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_la1u1"]
+height = 1.7878418
 
 [node name="Player_Full" unique_id=1021599860 instance=ExtResource("1_8dwk4")]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("2_0mqnh")
 
-[node name="Armature" parent="." index="0" unique_id=1785443736]
+[node name="collision" type="CollisionShape3D" parent="." index="0" unique_id=207559934]
+transform = Transform3D(1, 0, 0, 0, 1, 7.5497894e-08, 0, -7.5497894e-08, 1, -0.0002850294, 0.898633, -0.034094997)
+shape = SubResource("CapsuleShape3D_la1u1")
+
+[node name="Armature" parent="." index="1" unique_id=587280727]
 unique_name_in_owner = true
 
-[node name="Skeleton3D" parent="Armature" index="0" unique_id=1469579596]
+[node name="Skeleton3D" parent="Armature" index="0" unique_id=1023187045]
 unique_name_in_owner = true
 bones/0/position = Vector3(-0.025953403, 0.8274958, 0.0007091146)
 bones/0/rotation = Quaternion(-0.030928703, -0.030664062, -0.013737427, 0.99895674)
@@ -61,8 +72,17 @@ bone_idx = 25
 unique_name_in_owner = true
 transform = Transform3D(1, 2.9802322e-08, -2.9802322e-08, 0, 1, 1.4901161e-08, -5.9604645e-08, -1.4901161e-08, 0.9999999, -0.022207648, 0.09337479, 0.028813273)
 
-[node name="model" parent="Armature/Skeleton3D" index="1" unique_id=2122057744]
+[node name="Pistol_gun" parent="Armature/Skeleton3D/BoneAttachment3D/Muzzle" index="0" unique_id=1894334074 instance=ExtResource("3_la1u1")]
+unique_name_in_owner = true
+transform = Transform3D(0.0005739572, 0.00081412506, -8.817382e-05, -0.000113733826, 0.00018588433, 0.00097596773, 0.0008109496, -0.0005501353, 0.00019928318, 0.04861097, 0.117467016, -0.0046542287)
+
+[node name="bullet_effect" type="AudioStreamPlayer" parent="Armature/Skeleton3D/BoneAttachment3D/Muzzle" index="1" unique_id=2139178140]
+unique_name_in_owner = true
+stream = ExtResource("3_30ltx")
+volume_db = -10.0
+
+[node name="model" parent="Armature/Skeleton3D" index="1" unique_id=2061593694]
 unique_name_in_owner = true
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1841170495]
+[node name="AnimationPlayer" parent="." index="2" unique_id=1563635515]
 unique_name_in_owner = true
