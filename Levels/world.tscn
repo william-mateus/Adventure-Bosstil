@@ -1496,3 +1496,27 @@ debug_color = Color(0.9308341, 0.21911874, 0.38103938, 0.41960785)
 
 [node name="effect_galinha" type="AudioStreamPlayer" parent="farm/galinha" unique_id=124026747]
 stream = ExtResource("10_pr8ms")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=928096914]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=299516315]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=308735011]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="WaveLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer" unique_id=2070154109]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="EnemiesLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer" unique_id=2099608907]
+unique_name_in_owner = true
+layout_mode = 2

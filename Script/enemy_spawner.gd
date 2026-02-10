@@ -3,7 +3,10 @@ extends Node3D
 @export var enemy_scene : PackedScene
 @export var spawn_radius : float = 30.0 
 @export var base_spawn_rate : float = 2.0
-@onready var animation_player: AnimationPlayer = %AnimationPlayer
+
+# Referências da UI (Arraste os nós para aqui se os nomes forem diferentes)
+@onready var wave_label = %WaveLabel
+@onready var enemies_label = %EnemiesLabel
 
 var wave_atual : int = 1
 var wave_maxima : int = 5
@@ -13,41 +16,50 @@ var timer = 0.0
 var wave_em_andamento : bool = false
 
 func _ready():
-	# Aguarda um segundo antes de começar a primeira onda
 	await get_tree().create_timer(1.0).timeout
 	preparar_onda(wave_atual)
 
 func _process(delta):
+	# Atualiza a contagem de inimigos na tela todo frame
+	atualizar_ui()
+
 	if not wave_em_andamento:
 		return
 
-	# Fase 1: Spawning (Gerando inimigos)
 	if inimigos_gerados_nesta_wave < inimigos_para_spawnar:
 		timer += delta
 		if timer >= base_spawn_rate:
 			spawn_enemy()
 			timer = 0.0
 	else:
-		# Fase 2: Monitoramento (Esperando todos morrerem)
 		verificar_fim_da_onda()
+
+func atualizar_ui():
+	var vivos = get_tree().get_nodes_in_group("inimigos_vivos").size()
+	
+	# Atualiza os textos
+	wave_label.text = "ONDA: " + str(wave_atual) + " / " + str(wave_maxima)
+	
+	if wave_em_andamento:
+		enemies_label.text = "INIMIGOS RESTANTES: " + str(vivos)
+	else:
+		enemies_label.text = "PREPARE-SE PARA A PRÓXIMA!"
 
 func preparar_onda(numero):
 	wave_atual = numero
 	inimigos_gerados_nesta_wave = 0
 	inimigos_para_spawnar = numero * 5
 	wave_em_andamento = true
-	print("--- ONDA ", wave_atual, " COMEÇOU! (Total: ", inimigos_para_spawnar, ") ---")
 
 func spawn_enemy():
 	if not enemy_scene: return
 	
 	var enemy = enemy_scene.instantiate()
 	
-	# Posição de spawn
+	# Posição e Lógica da Cerca
 	var angle = randf() * PI * 2
 	var pos = Vector3(cos(angle) * spawn_radius, 0, sin(angle) * spawn_radius)
 	
-	# Lógica da cerca
 	var cercas = get_tree().get_nodes_in_group("cercas")
 	if cercas.size() > 0:
 		var cerca_proxima = cercas[0]
@@ -59,25 +71,22 @@ func spawn_enemy():
 				cerca_proxima = c
 		enemy.posicao_cerca = cerca_proxima.global_position
 
-	# ADICIONA O INIMIGO E CONFIGURA O GRUPO
 	add_child(enemy)
 	enemy.global_position = pos
-	enemy.add_to_group("inimigos_vivos") # ESSENCIAL
+	enemy.add_to_group("inimigos_vivos")
 	
 	inimigos_gerados_nesta_wave += 1
-	print("Inimigo spawnado (", inimigos_gerados_nesta_wave, "/", inimigos_para_spawnar, ")")
 
 func verificar_fim_da_onda():
 	var vivos = get_tree().get_nodes_in_group("inimigos_vivos").size()
 	
-	# Otimização: Só printa se ainda tiver inimigos, para não inundar o console
 	if vivos == 0:
-		print("--- ONDA ", wave_atual, " LIMPA! ---")
 		wave_em_andamento = false
 		
 		if wave_atual < wave_maxima:
-			print("Próxima onda em 3 segundos...")
-			await get_tree().create_timer(3.0).timeout
+			await get_tree().create_timer(4.0).timeout 
 			preparar_onda(wave_atual + 1)
 		else:
-			print("VITÓRIA FINAL! Todas as ondas concluídas.")
+			wave_label.text = "VITÓRIA!"
+			enemies_label.text = "VOCÊ SOBREVIVEU!"
+			set_process(false)
