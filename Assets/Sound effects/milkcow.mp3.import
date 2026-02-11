@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5f5okgr36h1o"
+path="res://.godot/imported/milkcow.mp3-1028f906c06180f35f2d265c593705e1.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound effects/milkcow.mp3"
+dest_files=["res://.godot/imported/milkcow.mp3-1028f906c06180f35f2d265c593705e1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

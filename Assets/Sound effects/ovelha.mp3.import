@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://j5jbhty4ioyx"
+path="res://.godot/imported/ovelha.mp3-d758afd85d28828089676784987130c6.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound effects/ovelha.mp3"
+dest_files=["res://.godot/imported/ovelha.mp3-d758afd85d28828089676784987130c6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

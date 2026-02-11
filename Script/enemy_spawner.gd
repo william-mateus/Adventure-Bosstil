@@ -3,6 +3,7 @@ extends Node3D
 @export var enemy_scene : PackedScene
 @export var spawn_radius : float = 30.0 
 @export var base_spawn_rate : float = 2.0
+@onready var buzina: AudioStreamPlayer = $Buzina
 
 # Referências da UI (Arraste os nós para aqui se os nomes forem diferentes)
 @onready var wave_label = %WaveLabel
@@ -41,9 +42,10 @@ func atualizar_ui():
 	wave_label.text = "ONDA: " + str(wave_atual) + " / " + str(wave_maxima)
 	
 	if wave_em_andamento:
-		enemies_label.text = "INIMIGOS RESTANTES: " + str(vivos)
+		enemies_label.text = "INIMIGOS VIVOS: " + str(vivos)
 	else:
 		enemies_label.text = "PREPARE-SE PARA A PRÓXIMA!"
+		buzina.play()
 
 func preparar_onda(numero):
 	wave_atual = numero
