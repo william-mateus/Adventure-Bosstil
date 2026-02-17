@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cakwn0cbgd85l" path="res://Assets/NPCS/LRS Enemy/LRS_enemy.fbx" id="1_oxq2y"]
 [ext_resource type="Script" uid="uid://clk3vj2gf4c6d" path="res://Script/lrs_enemy.gd" id="2_qpcto"]
+[ext_resource type="PackedScene" uid="uid://dco8q0utyjpqp" path="res://Assets/Ammo/explosion.tscn" id="3_0w05r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qpcto"]
 height = 1.9377441
@@ -10,6 +11,7 @@ height = 1.9377441
 collision_layer = 4
 collision_mask = 7
 script = ExtResource("2_qpcto")
+explosion = ExtResource("3_0w05r")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="0" unique_id=51535660]
 transform = Transform3D(1, 0, 0, 0, 1, 7.5497894e-08, 0, -7.5497894e-08, 1, 0, 0.97606814, 0.055081833)

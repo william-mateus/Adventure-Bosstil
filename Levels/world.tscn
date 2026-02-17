@@ -30,9 +30,12 @@
 [ext_resource type="FontFile" uid="uid://d0lerjnd1fpmm" path="res://Assets/Fonts/AlfaSlabOne-Regular.ttf" id="29_bx8pj"]
 [ext_resource type="Script" uid="uid://nafwqt8dcqqh" path="res://Script/enemy_spawner.gd" id="29_mgs3r"]
 [ext_resource type="PackedScene" uid="uid://bevyrpqxfy7yh" path="res://Assets/Pack Farm/catavento.glb" id="29_nhpdp"]
+[ext_resource type="PackedScene" uid="uid://bkmsvevunvtpi" path="res://Assets/Imagens/life_progress_bar.tscn" id="29_nnqlo"]
 [ext_resource type="PackedScene" uid="uid://d0usuradi1gda" path="res://Assets/Pack Farm/tractor.glb" id="30_dy3rw"]
+[ext_resource type="Texture2D" uid="uid://dbtphlv1j7bro" path="res://Assets/Imagens/icon_farm_png.png" id="30_r4i46"]
 [ext_resource type="PackedScene" uid="uid://d0ew236xu0vfd" path="res://Assets/Pack Farm/milho.glb" id="31_dy3rw"]
 [ext_resource type="PackedScene" uid="uid://dpi7221aytc3a" path="res://Assets/Pack Farm/Abobora.glb" id="32_c23wl"]
+[ext_resource type="Script" uid="uid://cwnda1310aano" path="res://Script/house_famr.gd" id="32_ece3b"]
 [ext_resource type="Script" uid="uid://dd3q08t0x1aw3" path="res://Script/cow.gd" id="33_5stjl"]
 [ext_resource type="PackedScene" uid="uid://3q6r6nto57r5" path="res://Assets/Animals/cow.scn" id="34_bnbff"]
 [ext_resource type="AudioStream" uid="uid://dtw40ywuip1vp" path="res://Assets/Sound effects/vaca-mugir.mp3" id="35_bnbff"]
@@ -1532,6 +1535,38 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Box_Life" type="VBoxContainer" parent="Hud/Control" unique_id=553838648]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 32.0
+offset_right = 85.0
+offset_bottom = 61.0
+
+[node name="Life_Text" type="Label" parent="Hud/Control/Box_Life" unique_id=11265679]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("29_bx8pj")
+text = "Vida:"
+
+[node name="Life_ProgressBar" parent="Hud/Control/Box_Life/Life_Text" unique_id=643955435 instance=ExtResource("29_nnqlo")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 60.0
+offset_top = 44.0
+offset_right = 345.0
+offset_bottom = 71.0
+
+[node name="icon" type="TextureRect" parent="Hud/Control/Box_Life/Life_Text" unique_id=237100483]
+layout_mode = 0
+offset_left = -8.999999
+offset_top = 21.999998
+offset_right = 650.99994
+offset_bottom = 669.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("30_r4i46")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="Hud/Control" unique_id=308735011]
 layout_mode = 1
 anchors_preset = 10
@@ -1568,6 +1603,7 @@ theme_override_fonts/font = ExtResource("29_bx8pj")
 
 [node name="House famr2" parent="Farm" unique_id=459139615 instance=ExtResource("28_kss01")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.739, -0.11236, 9.303)
+script = ExtResource("32_ece3b")
 
 [node name="catavento" parent="Farm" unique_id=557427763 instance=ExtResource("29_nhpdp")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.8186588, 0.23791862, 40.885284)
