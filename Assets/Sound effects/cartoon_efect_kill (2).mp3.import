@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://brlcefoegj8o"
+path="res://.godot/imported/cartoon_efect_kill (2).mp3-d2cb9f5587ff3fa2bdf7725a7c27de38.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound effects/cartoon_efect_kill (2).mp3"
+dest_files=["res://.godot/imported/cartoon_efect_kill (2).mp3-d2cb9f5587ff3fa2bdf7725a7c27de38.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

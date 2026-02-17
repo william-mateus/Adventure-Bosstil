@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://dco8q0utyjpqp"]
 
 [ext_resource type="Script" uid="uid://bryuwowy40vg3" path="res://Script/explosion.gd" id="1_284g7"]
+[ext_resource type="AudioStream" uid="uid://d12srsbnerd55" path="res://Assets/Sound effects/cartoon_efect_kill (1).mp3" id="2_3j03q"]
+[ext_resource type="AudioStream" uid="uid://brlcefoegj8o" path="res://Assets/Sound effects/cartoon_efect_kill (2).mp3" id="3_f7pic"]
+[ext_resource type="AudioStream" uid="uid://bb1mx7ptfvmem" path="res://Assets/Sound effects/cartoon_efect_kill (3).mp3" id="4_f67ec"]
+[ext_resource type="AudioStream" uid="uid://4t0vk2kpsprh" path="res://Assets/Sound effects/cartoon_efect_kill (4).mp3" id="5_yqtwy"]
+[ext_resource type="AudioStream" uid="uid://bgxr0ekwc7e23" path="res://Assets/Sound effects/cartoon_efect_kill (5).mp3" id="6_f67ec"]
+[ext_resource type="AudioStream" uid="uid://bq8wbqpwhmgm7" path="res://Assets/Sound effects/cartoon_efect_kill (6).mp3" id="7_yqtwy"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2ofc6"]
 particle_flag_align_y = true
@@ -88,6 +94,7 @@ alpha_curve = SubResource("CurveTexture_wxce7")
 
 [node name="explosion" type="Node3D" unique_id=745288001]
 script = ExtResource("1_284g7")
+lista_de_sons = Array[AudioStream]([ExtResource("2_3j03q"), ExtResource("3_f7pic"), ExtResource("4_f67ec"), ExtResource("5_yqtwy"), ExtResource("6_f67ec"), ExtResource("7_yqtwy")])
 
 [node name="sparkles" type="GPUParticles3D" parent="." unique_id=1179376172]
 emitting = false
@@ -120,3 +127,6 @@ randomness = 0.5
 fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_55v6r")
 draw_pass_1 = SubResource("SphereMesh_krdjs")
+
+[node name="som_player" type="AudioStreamPlayer" parent="." unique_id=930218464]
+unique_name_in_owner = true
