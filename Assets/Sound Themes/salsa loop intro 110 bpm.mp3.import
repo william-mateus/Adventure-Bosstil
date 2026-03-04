@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://di853bij0cq3b"
+path="res://.godot/imported/salsa loop intro 110 bpm.mp3-cbfde348cc65f8799bdefd24efb441fd.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound Themes/salsa loop intro 110 bpm.mp3"
+dest_files=["res://.godot/imported/salsa loop intro 110 bpm.mp3-cbfde348cc65f8799bdefd24efb441fd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dckunnqv3nmqj"]
+
+[ext_resource type="PackedScene" uid="uid://sd5h1v2ma3bm" path="res://Assets/NPCS/Player Menu/player_Menu_dancing.fbx" id="1_k6y5h"]
+
+[node name="player_Menu_dancing" unique_id=1894921896 instance=ExtResource("1_k6y5h")]
+
+[node name="Skeleton3D" parent="." index="0" unique_id=157187936]
+bones/0/position = Vector3(-0.001847411, 0.80254763, 0.0021302402)
+bones/0/rotation = Quaternion(-0.013045722, -0.06276382, -0.028653463, 0.9975317)
+bones/1/rotation = Quaternion(-0.019930571, 0.017649224, 0.019774174, 0.99944997)
+bones/2/rotation = Quaternion(0.0072992244, 0.0040688477, -0.020679573, 0.9997513)
+bones/3/rotation = Quaternion(0.007396419, 0.00398325, -0.02066369, 0.9997512)
+bones/4/rotation = Quaternion(0.022946877, -0.0031173986, -0.0027714649, 0.9997281)
+bones/5/rotation = Quaternion(-0.025740918, -0.016109196, -0.014374429, 0.99943554)
+bones/7/rotation = Quaternion(-0.6085833, -0.39982724, 0.54706866, -0.41289288)
+bones/8/rotation = Quaternion(0.39084882, 0.30462295, 0.12701227, 0.85924965)
+bones/9/rotation = Quaternion(0.016397255, -0.008728451, 0.22226378, 0.9748096)
+bones/10/rotation = Quaternion(0.04532037, 0.18370454, 0.009028607, 0.9818948)
+bones/11/rotation = Quaternion(0.04535542, 0.09013129, 0.16928089, 0.9803894)
+bones/12/rotation = Quaternion(0.055883646, -0.031924, -0.11019406, 0.9918242)
+bones/13/rotation = Quaternion(-0.016643839, -0.0048571127, 0.047826648, 0.99870527)
+bones/15/rotation = Quaternion(0.069305025, -0.006377807, 0.035486702, 0.9969438)
+bones/16/rotation = Quaternion(0.121923625, -0.000112386275, -0.0059997994, 0.9925214)
+bones/17/rotation = Quaternion(0.113541454, 0.0022311807, 0.012372123, 0.99345374)
+bones/19/rotation = Quaternion(0.7289107, -0.35072514, 0.39513704, 0.43537107)
+bones/20/rotation = Quaternion(0.40808624, -0.28486007, -0.187118, 0.84693986)
+bones/21/rotation = Quaternion(0.017831327, 0.008966143, -0.23748605, 0.9711859)
+bones/22/rotation = Quaternion(0.047082286, 0.10834721, 0.15370074, 0.9810303)
+bones/23/rotation = Quaternion(0.13436209, -0.044707246, -0.17741878, 0.97389466)
+bones/24/rotation = Quaternion(0.06544547, 0.029244246, 0.13905275, 0.9876872)
+bones/25/rotation = Quaternion(-0.020630326, -0.00013472508, 0.015639096, 0.99966484)
+bones/27/rotation = Quaternion(0.2502668, 0.00917918, -0.073597975, 0.965332)
+bones/28/rotation = Quaternion(0.15280318, -8.10111e-05, -0.0018754326, 0.9882549)
+bones/29/rotation = Quaternion(0.060611725, -0.0017600873, -0.013399153, 0.99806994)
+bones/31/rotation = Quaternion(0.054612134, 0.034221943, 0.9958666, -0.064001545)
+bones/32/rotation = Quaternion(-0.21939981, -0.07116487, 0.056712292, 0.9713821)
+bones/33/rotation = Quaternion(0.54010236, -0.29617304, 0.08218254, 0.7834648)
+bones/34/rotation = Quaternion(0.28277463, -0.067153536, 0.019850127, 0.95662683)
+bones/36/rotation = Quaternion(-0.059659973, 0.017651217, 0.99799204, 0.011880323)
+bones/37/rotation = Quaternion(-0.14692733, 0.07869957, -0.07536075, 0.9831275)
+bones/38/rotation = Quaternion(0.5196818, 0.18810424, -0.055396654, 0.83155215)
+bones/39/rotation = Quaternion(0.28462946, 0.071167484, -0.021114945, 0.95575917)
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1015680102]
+autoplay = &"mixamo_com"

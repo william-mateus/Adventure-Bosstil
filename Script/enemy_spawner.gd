@@ -5,7 +5,7 @@ extends Node3D
 @export var base_spawn_rate : float = 2.0
 @onready var buzina: AudioStreamPlayer = $Buzina
 
-# Referências da UI (Arraste os nós para aqui se os nomes forem diferentes)
+
 @onready var wave_label = %WaveLabel
 @onready var enemies_label = %EnemiesLabel
 
@@ -21,7 +21,7 @@ func _ready():
 	preparar_onda(wave_atual)
 
 func _process(delta):
-	# Atualiza a contagem de inimigos na tela todo frame
+
 	atualizar_ui()
 
 	if not wave_em_andamento:

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbwh3wpqxlc5b"
+path="res://.godot/imported/logo_sound1.mp3-47f7c2c4c3c1068f2fb4b3a40da30a60.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound effects/logo_sound1.mp3"
+dest_files=["res://.godot/imported/logo_sound1.mp3-47f7c2c4c3c1068f2fb4b3a40da30a60.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

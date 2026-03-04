@@ -15,9 +15,15 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Adventure Bosstil"
-run/main_scene="uid://bb6ggc3pqn578"
+run/main_scene="uid://cpcxr3ijq8hn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/show_image=false
+config/icon="uid://dq5oi1s67r88w"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [global_group]
 

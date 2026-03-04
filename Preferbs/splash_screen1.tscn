@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://cpcxr3ijq8hn"]
+
+[ext_resource type="Texture2D" uid="uid://c7qxonvjk0e4i" path="res://Assets/Imagens/realLogo.png" id="1_b67jn"]
+[ext_resource type="Script" uid="uid://cxcxlrsxnscgr" path="res://Script/splash_screen_1.gd" id="1_ue64i"]
+[ext_resource type="AudioStream" uid="uid://dbwh3wpqxlc5b" path="res://Assets/Sound effects/logo_sound1.mp3" id="3_ue64i"]
+
+[sub_resource type="Animation" id="Animation_u07bu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mask:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.141176, 0.141176, 0.141176, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_j3ve2"]
+resource_name = "fade_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mask:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1.9),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Color(0.141176, 0.141176, 0.141176, 0), Color(0.141176, 0.141176, 0.141176, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_njhmh"]
+resource_name = "fade_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mask:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 1.9),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Color(0.141176, 0.141176, 0.141176, 1), Color(0.141176, 0.141176, 0.141176, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gss6a"]
+_data = {
+&"RESET": SubResource("Animation_u07bu"),
+&"fade_in": SubResource("Animation_j3ve2"),
+&"fade_out": SubResource("Animation_njhmh")
+}
+
+[node name="Splash_Screen1" type="Control" unique_id=1340462088]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_ue64i")
+
+[node name="screen_1" type="TextureRect" parent="." unique_id=1266453984]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_b67jn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Mask" type="ColorRect" parent="." unique_id=1492042915]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.141176, 0.141176, 0.141176, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=937064868]
+libraries/ = SubResource("AnimationLibrary_gss6a")
+autoplay = &"fade_out"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AnimationPlayer" unique_id=1160882510]
+stream = ExtResource("3_ue64i")
+autoplay = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

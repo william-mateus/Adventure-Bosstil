@@ -1,0 +1,209 @@
+[gd_scene format=3 uid="uid://b74gmtss5tcjx"]
+
+[ext_resource type="Script" uid="uid://chkkosoby68e1" path="res://Script/menu_pause.gd" id="1_i5hdv"]
+[ext_resource type="Theme" uid="uid://duxkkvim46gjq" path="res://Default_Buttons.tres" id="1_ngfbd"]
+[ext_resource type="Shader" uid="uid://c42fba8v0gdxr" path="res://blur_shader.gdshader" id="1_nmkxf"]
+[ext_resource type="Texture2D" uid="uid://c04dnsypp7882" path="res://Assets/Imagens/Icon_button/exit_to_app_32dp.png" id="2_nmkxf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i5hdv"]
+shader = ExtResource("1_nmkxf")
+shader_parameter/lod = 0.0
+
+[sub_resource type="InputEventAction" id="InputEventAction_i5hdv"]
+action = &"ui_cancel"
+
+[sub_resource type="Shortcut" id="Shortcut_sjakc"]
+events = [SubResource("InputEventAction_i5hdv")]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d30iq"]
+bg_color = Color(0.5727232, 0.4901278, 0.39698246, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9416066, 0.8466609, 0.47961515, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6t78"]
+bg_color = Color(0.7203546, 0.63485765, 0.539142, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.97666353, 0.927834, 0.73921996, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mq2v"]
+bg_color = Color(0.5727232, 0.4901278, 0.39698246, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9416066, 0.8466609, 0.47961515, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kcj2k"]
+bg_color = Color(0.42564473, 0.35765862, 0.28069347, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.7607806, 0.65829885, 0.23768708, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id="Theme_i5hdv"]
+Button/colors/font_color = Color(0.9416066, 0.8466609, 0.47961515, 1)
+Button/colors/font_outline_color = Color(0.22745098, 0.1882353, 0.14117648, 1)
+Button/constants/outline_size = 10
+Button/font_sizes/font_size = 20
+Button/icons/icon = ExtResource("2_nmkxf")
+Button/styles/focus = SubResource("StyleBoxFlat_d30iq")
+Button/styles/hover = SubResource("StyleBoxFlat_v6t78")
+Button/styles/normal = SubResource("StyleBoxFlat_7mq2v")
+Button/styles/pressed = SubResource("StyleBoxFlat_kcj2k")
+
+[sub_resource type="Animation" id="Animation_sjakc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("backgroundOver:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("backgroundOver/menu_holder:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k571x"]
+resource_name = "pause_game"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("backgroundOver:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("backgroundOver/menu_holder:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.16666667, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_nlsef"]
+resource_name = "resume_game"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("backgroundOver:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("backgroundOver/menu_holder:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.13333334, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8blr7"]
+_data = {
+&"RESET": SubResource("Animation_sjakc"),
+&"pause_game": SubResource("Animation_k571x"),
+&"resume_game": SubResource("Animation_nlsef")
+}
+
+[node name="Control" type="CanvasLayer" unique_id=685051455]
+process_mode = 3
+script = ExtResource("1_i5hdv")
+
+[node name="backgroundOver" type="ColorRect" parent="." unique_id=802193818]
+material = SubResource("ShaderMaterial_i5hdv")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="menu_holder" type="VBoxContainer" parent="backgroundOver" unique_id=1104512135]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -51.0
+offset_right = 143.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Resume" type="Button" parent="backgroundOver/menu_holder" unique_id=1132814072]
+layout_mode = 2
+theme = ExtResource("1_ngfbd")
+shortcut = SubResource("Shortcut_sjakc")
+text = "Resume"
+
+[node name="Quit" type="Button" parent="backgroundOver/menu_holder" unique_id=31561358]
+layout_mode = 2
+theme = SubResource("Theme_i5hdv")
+text = "Quit"
+
+[node name="animator" type="AnimationPlayer" parent="." unique_id=1937991439]
+libraries/ = SubResource("AnimationLibrary_8blr7")
+
+[connection signal="pressed" from="backgroundOver/menu_holder/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="backgroundOver/menu_holder/Quit" to="." method="_on_quit_pressed"]

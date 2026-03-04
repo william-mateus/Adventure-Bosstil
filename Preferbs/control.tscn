@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://w15pi00owc4g"]
+
+[ext_resource type="Texture2D" uid="uid://c7qxonvjk0e4i" path="res://Assets/Imagens/realLogo.png" id="1_i87we"]
+[ext_resource type="AudioStream" uid="uid://y1u6r082xbja" path="res://Assets/Sound effects/logo_sound.mp3" id="2_mpn3r"]
+
+[sub_resource type="Animation" id="Animation_lpsjf"]
+resource_name = "fade_out"
+length = 2.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_owvby"]
+_data = {
+&"fade_out": SubResource("Animation_lpsjf")
+}
+
+[node name="Control" type="Control" unique_id=507981088]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="icon screen" type="TextureRect" parent="." unique_id=171387654]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_i87we")
+
+[node name="Mask" type="ColorRect" parent="." unique_id=1630996431]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14117648, 0.14117648, 0.14117648, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=728266427]
+libraries/ = SubResource("AnimationLibrary_owvby")
+autoplay = &"fade_out"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1819257422]
+stream = ExtResource("2_mpn3r")

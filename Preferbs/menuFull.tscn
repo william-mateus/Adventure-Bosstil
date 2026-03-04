@@ -1,0 +1,206 @@
+[gd_scene format=3 uid="uid://cwpc1lugn5n4e"]
+
+[ext_resource type="PackedScene" uid="uid://co475mi3hfxex" path="res://Preferbs/menu.tscn" id="1_i5xxo"]
+[ext_resource type="Script" uid="uid://b4g442muv307i" path="res://Script/Title_screen.gd" id="2_7mq2v"]
+[ext_resource type="Texture2D" uid="uid://dei3u8y7ln5mq" path="res://Assets/Imagens/titulo_final-removebg-preview.png" id="2_i5xxo"]
+[ext_resource type="FontFile" uid="uid://d0lerjnd1fpmm" path="res://Assets/Fonts/AlfaSlabOne-Regular.ttf" id="3_csb40"]
+[ext_resource type="Theme" uid="uid://duxkkvim46gjq" path="res://Default_Buttons.tres" id="3_v6t78"]
+[ext_resource type="Texture2D" uid="uid://cdjubhmtowhij" path="res://Assets/Imagens/Icon_button/artist_32dp.png" id="5_7mq2v"]
+[ext_resource type="Texture2D" uid="uid://c04dnsypp7882" path="res://Assets/Imagens/Icon_button/exit_to_app_32dp.png" id="6_kcj2k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d30iq"]
+bg_color = Color(0.5727232, 0.4901278, 0.39698246, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9416066, 0.8466609, 0.47961515, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6t78"]
+bg_color = Color(0.7203546, 0.63485765, 0.539142, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.97666353, 0.927834, 0.73921996, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mq2v"]
+bg_color = Color(0.5727232, 0.4901278, 0.39698246, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9416066, 0.8466609, 0.47961515, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kcj2k"]
+bg_color = Color(0.42564473, 0.35765862, 0.28069347, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.7607806, 0.65829885, 0.23768708, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id="Theme_573xi"]
+Button/colors/font_color = Color(0.9416066, 0.8466609, 0.47961515, 1)
+Button/colors/font_outline_color = Color(0.22745098, 0.1882353, 0.14117648, 1)
+Button/constants/outline_size = 10
+Button/icons/icon = ExtResource("5_7mq2v")
+Button/styles/focus = SubResource("StyleBoxFlat_d30iq")
+Button/styles/hover = SubResource("StyleBoxFlat_v6t78")
+Button/styles/normal = SubResource("StyleBoxFlat_7mq2v")
+Button/styles/pressed = SubResource("StyleBoxFlat_kcj2k")
+
+[sub_resource type="Theme" id="Theme_i358a"]
+Button/colors/font_color = Color(0.9416066, 0.8466609, 0.47961515, 1)
+Button/colors/font_outline_color = Color(0.22745098, 0.1882353, 0.14117648, 1)
+Button/constants/outline_size = 10
+Button/icons/icon = ExtResource("6_kcj2k")
+Button/styles/focus = SubResource("StyleBoxFlat_d30iq")
+Button/styles/hover = SubResource("StyleBoxFlat_v6t78")
+Button/styles/normal = SubResource("StyleBoxFlat_7mq2v")
+Button/styles/pressed = SubResource("StyleBoxFlat_kcj2k")
+
+[sub_resource type="Animation" id="Animation_i5xxo"]
+resource_name = "AnimationCameraMenu"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Background/SubViewportContainer/SubViewport/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.99, 2.99),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(17.70663, 1.181674, -7.0605354), Vector3(17.70663, 1.181674, -6.18259), Vector3(17.70663, 2.579483, -6.18259), Vector3(17.70663, 1.1664047, -6.0585732)]
+}
+
+[sub_resource type="Animation" id="Animation_csb40"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Background/SubViewportContainer/SubViewport/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(17.70663, 1.181674, -7.0605354)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hoeoe"]
+_data = {
+&"AnimationCameraMenu": SubResource("Animation_i5xxo"),
+&"RESET": SubResource("Animation_csb40")
+}
+
+[node name="Menu" type="CanvasLayer" unique_id=175679357]
+
+[node name="Background" type="Node3D" parent="." unique_id=429701275]
+
+[node name="Menu" parent="Background" unique_id=1201576094 instance=ExtResource("1_i5xxo")]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Background" unique_id=759014875]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="Background/SubViewportContainer" unique_id=1827879990]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Background/SubViewportContainer/SubViewport" unique_id=110645676]
+transform = Transform3D(-0.1540476, 0.166177, 0.97398907, -0.044426236, 0.9835937, -0.17484224, -0.9870642, -0.07020469, -0.14413762, 17.70663, 1.181674, -7.0605354)
+
+[node name="Control" type="Control" parent="." unique_id=32961091]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_7mq2v")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=425764061]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer" unique_id=1678743576]
+layout_mode = 2
+
+[node name="GameTitle" type="TextureRect" parent="Control/MarginContainer/VBoxContainer" unique_id=477216195]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_i5xxo")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer" unique_id=1863825832]
+custom_minimum_size = Vector2(0, 170)
+layout_mode = 2
+
+[node name="StartGame" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=476482852]
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("3_v6t78")
+theme_override_fonts/font = ExtResource("3_csb40")
+theme_override_font_sizes/font_size = 20
+text = "Start Game
+"
+
+[node name="Credits" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=556421167]
+layout_mode = 2
+size_flags_horizontal = 8
+theme = SubResource("Theme_573xi")
+theme_override_fonts/font = ExtResource("3_csb40")
+theme_override_font_sizes/font_size = 20
+text = "Credits
+"
+
+[node name="Quit" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=2106953726]
+layout_mode = 2
+size_flags_horizontal = 8
+theme = SubResource("Theme_i358a")
+theme_override_fonts/font = ExtResource("3_csb40")
+theme_override_font_sizes/font_size = 20
+text = "Quit
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control" unique_id=1303035615]
+libraries/ = SubResource("AnimationLibrary_hoeoe")
+autoplay = &"AnimationCameraMenu"
+speed_scale = 0.2
+
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/StartGame" to="Control" method="_on_start_game_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Credits" to="Control" method="_on_credits_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Quit" to="Control" method="_on_quit_pressed"]

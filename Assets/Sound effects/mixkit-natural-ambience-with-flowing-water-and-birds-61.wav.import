@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d4eys1dpkx4uh"
+path="res://.godot/imported/mixkit-natural-ambience-with-flowing-water-and-birds-61.wav-400f12cf151099a79e8ca667d7fc3b97.sample"
+
+[deps]
+
+source_file="res://Assets/Sound effects/mixkit-natural-ambience-with-flowing-water-and-birds-61.wav"
+dest_files=["res://.godot/imported/mixkit-natural-ambience-with-flowing-water-and-birds-61.wav-400f12cf151099a79e8ca667d7fc3b97.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
